@@ -1,0 +1,139 @@
+/* ==================================================
+//  Color
+//================================================= */
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus, button:hover a, button.btn:hover, button.btn:active, 
+#about-our-firm h1.title, .about-tab .nav-tabs > li > a, .about-accordion .panel-title, .single-service i,
+.single-service > a, .member-info span, .date h4,.single-news h6 > span.color a, .post-item h2:hover, 
+.post-item h2 a:hover, .blog .posted-date, .posted-date a, .widget h3:hover, .widget h3 a:hover {
+	color: #AB4452;
+}
+
+
+
+
+
+/* ==================================================
+//  background
+//================================================= */
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar,
+.nav > li > a:hover, .nav > li > a:focus, button.btn:before, button.btn:after, .bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active, .about-tab .nav-tabs > li.active > a,
+.about-tab .nav-tabs > li.active > a:hover, .about-tab .nav-tabs > li.active > a:focus,
+.about-accordion .panel-heading .panel-title span i.fa-angle-down, .about-accordion .panel-heading:hover .panel-title span i,
+.member-social ul li a i.fa-envelope-o, .about-tab .nav > li > a:hover, .about-tab .nav > li > a:focus,
+.fb-bg:hover, .twitter-bg:hover, .reply:hover, .pagination > li > a
+ {
+	background: #AB4452;
+}
+
+
+
+
+
+/* ==================================================
+//  background-rgba 
+//================================================= */
+
+.bg-hippie-pink:before {
+	background: rgba(171,68,82,0.8);
+}
+
+
+
+
+
+/* ==================================================
+// Different Color
+//================================================= */
+
+.achievement-logo i {
+	color: #1D253C;
+}
+
+
+
+
+
+/* ==================================================
+// Different Background Color
+//================================================= */
+
+.bg-woody-brown, .bg-woody-brown:before, .bg-woody-brown:after {
+	background: #492f3a;
+}
+
+
+
+
+
+/* ==================================================
+// Different Background RGBA
+//================================================= */
+
+.bg-woody-brown-rgba:before, .ceo-overlay, .news-overlay {
+	background: rgba(73,47,58,0.9);
+}
+
+
+
+
+
+/* ==================================================
+//  border-color
+//================================================= */
+
+.bg-white button a:hover, .navbar-default .navbar-toggle, .comment-area input[type="text"],
+.comment-area input[type="phone"], .comment-area textarea, .comment-area input[type="email"], button.btn {
+	border-color: #AB4452 !important;
+}
+
+
+
+
+
+/* ==================================================
+//  button-gradient 
+//================================================= */
+
+button.btn {
+	background: linear-gradient(to right, #fff 50%, #AB4452 50%);
+	background-size: 200% 100%;
+    background-position:right bottom;
+}
+
+
+button.btn-transparent {
+	background: linear-gradient(to right, #AB4452 50%, rgba(255,255,255,0) 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+	color:#AB4452;
+	border:solid 1px #fff !important;
+}
+
+
+
+button.btn-transparent:hover,
+button.btn-transparent:active {
+	color:#fff !important;
+	background-position:left bottom;
+	border:solid 1px #AB4452 !important;
+}
+
+
+button.btn-transparent:hover a,
+button.btn-transparent:active a {
+	color:#fff !important;
+
+} 
+
+/* ==================================================
+//  background-image 
+//================================================= */
+
+.skill-bar .progress .bar {
+	background: url(../images/progress-bar-hippie-pink.png ) repeat-x scroll 0 0 #AB4452;
+ }
