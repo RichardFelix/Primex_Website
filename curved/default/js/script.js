@@ -20,7 +20,7 @@ jQuery(function ($) {
 
 		jQuery(function ($) {
 			var wow = new WOW({
-			mobile:       false
+			mobile:       true
 			});
 			wow.init();
 		}());
