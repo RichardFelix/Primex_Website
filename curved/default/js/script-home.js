@@ -24,11 +24,11 @@
 			'use strict';
 
 			var map;
-
+     
 			map = new GMaps({
 				el: '#map-wrapper',
-				lat: 45.494447,
-				lng: -73.5697587,
+				lat: 41.048784,
+				lng:  -73.803226,
 				scrollwheel:false,
 				zoom: 16,
 				zoomControl : true,
@@ -38,19 +38,24 @@
 				overviewMapControl: false,
 				clickable: true
 			});
-
+            
 			var image = '';
 			map.addMarker({
-				lat: 45.494447,
-				lng: -73.5697587,
+				lat: 41.048784,
+				lng:  -73.803226,
 				icon: image,
 				animation: google.maps.Animation.DROP,
 				verticalAlign: 'bottom',
 				horizontalAlign: 'center',
-				backgroundColor: '#d3cfcf',
-			});
-
-
+				backgroundColor: '#d0cfd3',
+                infoWindow: {
+                  content: '<p style="color:black">PrimeX<br/>Attention: Operations<br/>Knollwood Tower<br/>45 Knollwood Road<br/>4th Floor<br/>Elmsford NY 10523</p>'
+                }   
+			})
+            
+            google.maps.event.trigger(map.markers[0], 'click');
+            
+            
 			var styles = [ 
 
 			{
@@ -96,10 +101,8 @@
 			});
 
 			map.setStyle("map_style");
+            
 		}());
-
-
-   
 
     // -------------------------------------------------------------
     // Timer setup
