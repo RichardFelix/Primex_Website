@@ -9,6 +9,7 @@
     //	6. Collapse menu on click (only for mobile)
     //	7. Accordion
     //	8. bxSlider
+    //  9. Call Button (only for mobile)
     // -------------------------------------------------------------
     // End INDEX
     // -------------------------------------------------------------
@@ -262,7 +263,7 @@ var message =$('#message').val();
 		}, });
 
 //------------------------------------
-// call btn ( mobile phone only )
+// call button ( mobile phone only )
 //-------------------------------------
 /**
  * jQuery.browser.mobile (http://detectmobilebrowser.com/)
