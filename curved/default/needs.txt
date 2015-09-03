@@ -13,6 +13,7 @@ link email
 Fix Single page
 gmaps configured
 4 new icons for services
+button color changed to hero blue
 
 Wil's input
 //////////////
@@ -21,3 +22,11 @@ create real estate column and house icon
 linked in for our team section
 Disciplined Approach 
 logo
+
+-------New---------------
+Take out team section
+memberships --- finra/sipc/sec/adisa
+dropdown for what we do section
+new times roman
+modern font
+Make mutlipage site ( look at morgan stanley for inspiration )

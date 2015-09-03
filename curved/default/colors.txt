@@ -1,3 +1,4 @@
 6ca4d3 blue
 39536c navyblue
 d4688f pink  rgb(212, 104, 143)
+26a3e6 hero blue
