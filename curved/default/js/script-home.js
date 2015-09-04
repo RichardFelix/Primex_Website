@@ -28,8 +28,8 @@
      
 			map = new GMaps({
 				el: '#map-wrapper',
-				lat: 41.048784,
-				lng:  -73.803226,
+				lat: 40.741193,
+				lng:  -73.993081,
 				scrollwheel:false,
 				zoom: 16,
 				zoomControl : true,
@@ -42,15 +42,15 @@
             
 			var image = '';
 			map.addMarker({
-				lat: 41.048784,
-				lng:  -73.803226,
+				lat: 40.741193,
+				lng:  -73.993081,
 				icon: image,
 				animation: google.maps.Animation.DROP,
 				verticalAlign: 'bottom',
 				horizontalAlign: 'center',
 				backgroundColor: '#d0cfd3',
                 infoWindow: {
-                  content: '<p style="color:black">PrimeX<br/>Attention: Operations<br/>Knollwood Tower<br/>45 Knollwood Road<br/>4th Floor<br/>Elmsford NY 10523</p>'
+                  content: '<p style="color:black">PrimeX<br/>54 West 21 Street<br/>12 Floor<br/>New York, NY 10010</p>'
                 }   
 			})
             

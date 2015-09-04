@@ -13,3 +13,21 @@ link email
 Fix Single page
 gmaps configured
 4 new icons for services
+button color changed to hero blue
+
+Wil's input
+//////////////
+take out wealth management info into global and make global and wealth mangement
+create real estate column and house icon
+linked in for our team section
+Disciplined Approach 
+logo
+
+-------New---------------
+Take out team section
+memberships --- finra/sipc/sec/adisa
+dropdown for what we do section
+new times roman
+modern font
+Make mutlipage site ( look at morgan stanley for inspiration )
+Real Estate, private equity and the ones already on page
