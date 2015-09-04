@@ -1,5 +1,6 @@
 /* Table of Contents
 ==================================================
+# Variables root scope
 # Global Styles
 # Header Styles
 # Main Carousel Styles
@@ -26,6 +27,13 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
 @import url('css/animate.css');
 @import url('css/font-awesome.min.css');
+
+/* ==========================================================================
+ Variables root scope
+ ========================================================================== */
+:root {
+    --bgd: #26a3e6;
+}
 
 /* ==========================================================================
  Global Styles
@@ -99,7 +107,7 @@ button.btn {
     background-position:right bottom;
 	height:72px;
 	line-height:72px;
-	border:solid 1px #6ca4d3;
+	border:solid 1px var(--bgd);
 }
 
 button.btn:hover {
@@ -122,11 +130,11 @@ button.btn a {
 button:hover a,
 button.btn:hover,
 button.btn:active {
-	color:#6ca4d3;
+	color:var(--bgd);
 }
 
 .bg-white button a:hover {
-	border: solid 1px #6ca4d3  !important;
+	border: solid 1px var(--bgd) !important;
 	border-radius:4px;
 }
 
@@ -143,7 +151,7 @@ button.btn-transparent {
 	background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 50%);
     background-size: 200% 100%;
     background-position:right bottom;
-	color:#6ca4d3 ;
+	color: var(--bgd) ;
 	border:solid 1px #fff;
 }
 
@@ -196,8 +204,8 @@ a.navbar-brand {
 a.navbar-brand img {}
 
 .navbar-default .navbar-toggle {
-	border-color: #6ca4d3 ;
-	background-color: #6ca4d3 ;
+	border-color: var(--bgd);
+	background-color: var(--bgd) ;
 	margin-top: 12px;
 }
 
@@ -206,7 +214,7 @@ a.navbar-brand img {}
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar, .navbar-default .navbar-toggle:focus .icon-bar {
-	background-color: #6ca4d3 ;
+	background-color: var(--bgd) ;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -215,10 +223,10 @@ a.navbar-brand img {}
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	background: transparent;
-	color: #6ca4d3 ;
+	color: var(--bgd);
 }
 
-.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {color: #6ca4d3 ;}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {color: var(--bgd) ;}
 
 .navbar-default .navbar-nav>li>a, .navbar-nav li a {
 	text-transform: uppercase;
@@ -384,7 +392,7 @@ section#slider .continer {}
 }
 
 #about-our-firm h1.title {
-	color: #6ca4d3;
+	color: var(--bgd);
 	margin-bottom: 60px;
 }
 
@@ -407,7 +415,7 @@ section#slider .continer {}
 .skill-bar .progress .progress-bar { min-width:10%;}
 
 .skill-bar .progress .bar {
-	background: url(images/progress-bar.png ) repeat-x scroll 0 0 #6ca4d3;
+	background: url(images/progress-bar.png ) repeat-x scroll 0 0 var(--bgd);
 	border-radius: 30px;
 }
 
@@ -492,7 +500,7 @@ section#slider .continer {}
 	font-family: 'Merriweather Sans';
 	font-weight: 900;
 	text-transform: uppercase;
-	color: #6ca4d3;
+	color: var(--bgd);
 	border: none;
 	border-radius: 4px;
 	padding: 20px 35px;
@@ -500,12 +508,12 @@ section#slider .continer {}
 
 .about-tab .nav-tabs > li.active > a, .about-tab .nav-tabs > li.active > a:hover, .about-tab .nav-tabs > li.active > a:focus {
 	color: #fff;
-	background: #6ca4d3;
+	background: var(--bgd);
 	border: none;
 }
 
 .about-tab .nav > li > a:hover, .about-tab .nav > li > a:focus {
-	background-color: #6ca4d3;
+	background-color: var(--bgd);
 	color: #fff !important;
 }
 
@@ -530,7 +538,7 @@ section#slider .continer {}
 
 .about-accordion .panel-title {
 	line-height: 45px;
-	color: #6ca4d3;
+	color: var(--bgd);
 }
 
 .about-accordion .panel-heading .panel-title span i {
@@ -550,7 +558,7 @@ section#slider .continer {}
 
 .about-accordion .panel-heading .panel-title span i.fa-angle-down,
 .about-accordion .panel-heading:hover .panel-title span i {
-	background: #6ca4d3;
+	background: var(--bgd);
 }
 
 .about-accordion .panel-body {
@@ -624,7 +632,7 @@ section#slider .continer {}
 
 .single-service i {
 	font-size: 100px;
-	color: #6ca4d3;
+	color: var(--bgd);
 }
 
 .single-service > h3 {
@@ -645,7 +653,7 @@ section#slider .continer {}
 	word-spacing: -2px;
 }
 .single-service > a {
-	color: #6ca4d3;
+	color: var(--bgd);
 	font-size: 18px;
 }
 
@@ -668,7 +676,7 @@ section#slider .continer {}
 
 
 .achievement-logo i {
-	color: #39536C;
+	color: var(--bgd);
 	font-size: 64px;
 }
 
@@ -789,7 +797,7 @@ section#slider .continer {}
 }
 
 .member-info span {
-	color: #6ca4d3;
+	color: var(--bgd);
 	font-size: 18px;
 	font-weight: bold;
 	font-family: 'Merriweather';
@@ -812,7 +820,7 @@ section#slider .continer {}
 }
 
 #news h1.title {
-	color: #39536c;
+	color: var(--bgd);
 	margin-bottom: 60px;
 }
 
@@ -862,7 +870,7 @@ section#slider .continer {}
 
 .date h4 {
 	font-size: 40px;
-	color: #6ca4d3;
+	color: var(--bgd);
 	font-family: 'Merriweather Sans';
 	font-weight: bold;
 	margin-bottom: 0;
@@ -875,7 +883,7 @@ section#slider .continer {}
 .autor > a > img {border-radius: 50%;}
 
 .single-news h3 a {
-	color: #39536c;
+	color: var(--bgd);
 	font-size: 24px;
 	font-family: 'Merriweather Sans';
 	font-weight: bold;
@@ -890,7 +898,7 @@ section#slider .continer {}
 } 
 
 .single-news h6 > span.color a {
-	margin-left: 5px;color: #6ca4d3;
+	margin-left: 5px;color: var(--bgd);
 } 
 
 
@@ -1238,14 +1246,14 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 .posted-date{
 	font-size:16px;
 	font-weight:700;
-	color: #6ca4d3;
+	color: var(--bgd);
 }
 .posted-date span {
 	color:#39536c;
 }
 
 .posted-date a {
-	color:#6ca4d3;
+	color: var(--bgd);
 }
 
 .post img:hover{
@@ -1294,12 +1302,12 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .post-item h2:hover, .post-item h2 a:hover {
-	color:#6ca4d3;
+	color: var(--bgd);
 }
 
 .blog .posted-date {
 	margin-top:15px;
-	color: #6ca4d3;
+	color: var(--bgd);
 }
 .single .posted-date {
 	margin-bottom: 15px;
@@ -1311,7 +1319,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 .pagination > li > a, .pagination > li > span {
 	margin:0 4px;
-	background-color:#6ca4d3;
+	background-color: var(--bgd);
 	color:#fff;
 	font-weight:700;
 	border-radius:4px;	
@@ -1402,7 +1410,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .widget h3:hover,.widget h3 a:hover {
-	color: #6ca4d3;
+	color: var(--bgd);
 }
 
 .widget img {
@@ -1515,7 +1523,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 
 .reply:hover {
-	background: #6ca4d3;
+	background: var(--bgd);
 	color: #fff;
 }
 
@@ -1537,7 +1545,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 
 .fb-bg:hover, .twitter-bg:hover {
 	color: #fff;
-	background: #6ca4d3;
+	background: var(--bgd);
 }
 
 .fb-bg {
@@ -1634,7 +1642,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background:#6ca4d3;
+	background: var(--bgd);
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
@@ -1743,7 +1751,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 //================================================= */
 
 .bg-charm:before {
-	background: rgba(108, 164, 211, 0.8);
+	background: rgba(38, 163, 230, 0.8);
 }
 
 
@@ -1793,7 +1801,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 
 .comment-area input[type="text"], .comment-area input[type="phone"], .comment-area textarea, .comment-area input[type="email"] {
 background: none repeat scroll 0 0 #fff;
-border: 1px solid #6ca4d3  !important;
+border: 1px solid var(--bgd) !important;
 width:auto;
 padding: 15px 12px;
 display:block;
