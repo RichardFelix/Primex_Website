@@ -31,3 +31,13 @@ new times roman
 modern font
 Make mutlipage site ( look at morgan stanley for inspiration )
 Real Estate, private equity and the ones already on page
+
+------------Nelson--------------
+-new Layout
+    One Page front Page with static page
+-bootstrap with dropdowns with summarys on single page and read more for longer page
+-Client Log - stern site (get from nelson), financial advisor login (brokers)
+-Home, Advisory Aprroach, Solutions, Services, Contact , see above for login
+-Finding professional photo of building
+-color for logo #7CA9C5 (scan card for correct color)
+-
