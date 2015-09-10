@@ -41,7 +41,8 @@
 
 html,
 body{
-	font-family: 'Merriweather Sans';
+
+	font-family: 'Raleway', sans-serif;
 	color: #fff;
 	font-size: 14px;
 	line-height: 26px;
@@ -64,6 +65,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+
 	font-weight:normal; 
 	margin:0 0 15px;
 }
@@ -83,8 +85,8 @@ li {
 
 h1.title {
 	font-size: 54px;
-	font-family: 'Merriweather';
-	font-weight: bold;
+	font-family: "Raleway",sans-serif;
+
 
 }
 
@@ -94,7 +96,7 @@ button.btn {
 	color: #fff;
 	font-size: 20px;
 	font-weight: 900;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	text-transform: uppercase;
 	border:none;
 	background: transparent;
@@ -233,7 +235,7 @@ a.navbar-brand img {}
 	color: #272930;
 	font-size: 14px;
 	line-height: 22px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 }
 
@@ -467,8 +469,7 @@ section#slider .continer {}
 
 .message-content span {
 	font-size: 14px;
-	font-family: 'Merriweather Sans';
-	font-weight: 900;
+	font-family: "Raleway",sans-serif;
 	text-transform: uppercase;
 }
 
@@ -497,7 +498,7 @@ section#slider .continer {}
 
 .about-tab .nav-tabs > li > a {
 	font-size: 14px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: 900;
 	text-transform: uppercase;
 	color: var(--bgd);
@@ -586,7 +587,7 @@ section#slider .continer {}
 #case-resolving  h1 {
 	font-size: 50px;
 	font-weight: 900;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 }
 
 #case-resolving  h2 {
@@ -642,13 +643,13 @@ section#slider .continer {}
 .single-service > h3 > a {
 	display: block;
 	margin: 47px 0 16px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 	color: #fff;
 }
 
 .single-service p {
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	margin-bottom: 16px;
 	word-spacing: -2px;
 }
@@ -691,7 +692,7 @@ section#slider .continer {}
 
 .achievement-info h2 {
 	font-size: 55px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: 900;
 }
 
@@ -791,7 +792,7 @@ section#slider .continer {}
 .member-info h3 {
 	margin: 40px 0 10px;
 	font-size:24px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 	white-space:nowrap;
 }
@@ -807,7 +808,7 @@ section#slider .continer {}
 }
 
 .member-info p {
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	word-spacing: -2px;
 }
 
@@ -871,13 +872,13 @@ section#slider .continer {}
 .date h4 {
 	font-size: 40px;
 	color: var(--bgd);
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 	margin-bottom: 0;
 }
 
 .date span {
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 }
 
 .autor > a > img {border-radius: 50%;}
@@ -885,7 +886,7 @@ section#slider .continer {}
 .single-news h3 a {
 	color: var(--bgd);
 	font-size: 24px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 	margin-top: 27px;
 	letter-spacing: -2px;
@@ -931,7 +932,7 @@ section#slider .continer {}
 
 #testimonial-carousel .item .client-message p {
 	font-size: 16px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	background: url(images/quote.png) no-repeat scroll 	top 0px	left 0px;
 }
 
@@ -976,7 +977,7 @@ section#slider .continer {}
 	background: rgba(255, 255, 255, 0.1);
 	border-color:transparent;
 	color: #fff; 
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-size: 16px;
 	padding: 20px 25px;
 } 
@@ -1072,7 +1073,7 @@ section#map-wrapper:before, section#map-wrapper:after {display:none;}
 .social h3 {
 	color: #39536c;
 	text-transform: uppercase;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: bold;
 	font-size: 18px;
 }
@@ -1174,7 +1175,7 @@ section#map-wrapper:before, section#map-wrapper:after {display:none;}
 p.copyright {
 	color: #a5a7a8;
 	font-size: 12px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: 900;
 	text-transform: uppercase;
 	border-top: 2px dotted #d9dbdd;
@@ -1186,7 +1187,7 @@ p.copyright {
 #footer p.copyright a {
 	color: #39536c;
 	font-size: 12px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-weight: 900;
 } 
 
@@ -1276,7 +1277,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 .blog p {
     margin: 0 0 15px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-size: 15px;
 }
 .blog .col-md-.8 {
@@ -1492,7 +1493,7 @@ button.btn, button.btn:hover, button.btn:after, button.btn:after:hover, .nav > l
 }
 .comments p {
 	margin-bottom:0px;
-	font-family: 'Merriweather Sans';
+	font-family: "Raleway",sans-serif;
 	font-size: 15px;
 }
 
