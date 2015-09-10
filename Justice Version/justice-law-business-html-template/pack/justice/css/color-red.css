@@ -1,0 +1,382 @@
+/* =========================== COLOR CSS FILE ===================================== */
+
+::-moz-selection {
+
+    background: #222;
+
+    color: #fff;
+
+    text-shadow: none;
+
+}
+
+
+
+::selection {
+
+    background: #222;
+
+    color: #fff;
+
+    text-shadow: none;
+
+}
+
+/* -------------------------------
+
+	***** Background Color *****
+
+--------------------------------*/
+
+.color-bg,
+/* Hover Bg color */
+
+.hvr-theme-bg-color-parent:hover .hvr-theme-bg-color,
+
+/* Countdown */
+
+.count-dark.period-top.period-color .countdown-period,
+
+/*btn */
+
+.btn:after, 
+
+.btn:after, 
+
+.btn.active,
+
+/* Owl Btn */
+
+.theme-color-owl-btn .owl-buttons div:hover,
+
+.owl-page.active,
+
+/* tooltip */
+
+.tooltip-theme-bg .tooltip-inner,
+
+.icon-border:hover,
+
+.icon-border:focus,
+
+.icon-border.active,
+
+/* pagination */
+
+.pagination > li > a:focus, 
+
+.pagination > li > a:hover,
+
+.pagination > li > a.active,
+
+.pagination > li > span:focus, 
+
+.pagination > li > span:hover,
+
+.pagination > li > span.active,
+
+/* Social Links Color */
+
+.social-links.color li a,
+
+/* Tags */
+
+.widget-tag > li a:hover, 
+
+.widget-tag > li a:focus, 
+
+.widget-tag > li a.active,
+
+/* Filter */
+
+.nav-pills > li > a:hover, 
+
+.nav-pills > li > a:focus, 
+
+.nav-pills > li > a.active,
+
+.navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
+
+.top-social li a:hover,
+
+#orange-layout #sendingbtn
+{
+
+	background-color: #eb6363;
+
+}
+
+.dropdown-menu > li > a:focus,
+
+.dropdown-menu > li > a:hover,
+
+.dropdown-menu .sub-menu a:hover,
+
+.dropdown-menu .sub-menu a:focus
+
+{
+
+	background-color: #eb6363 !important;
+
+}
+
+
+
+
+
+.color-bg.dark-color
+
+{
+
+	background-color: #eb6363;
+
+}
+
+.color-bg.light-color, .color-bg
+
+{
+
+	background-color: #db5353;
+
+}
+
+
+
+
+
+/* -------- Bg rgba ------------- */
+
+.effect-parent .effect.color,
+
+.overlay.color{background:rgba(24,92,132,0.9)}
+
+
+
+
+
+/* -------------------------------
+
+	***** Color *****
+
+--------------------------------*/
+
+.color-text,
+
+.color-owl-btn .owl-buttons div,
+
+.hvr-color-text:hover,
+
+.hvr-color-text:focus,
+
+.hvr-color-text.active,
+
+.hvr-color-text-parent:hover  .hvr-color-text,
+
+.hvr-color-text-parent:focus  .hvr-color-text,
+
+/* Social Links */
+
+.social-links li a:hover, .social-links li a:focus, .social-links li a.active,
+
+/* Nav Menu */
+
+#header nav ul.nav-main li.active,
+
+/* Btn */
+
+.btn,
+
+.btn.btn-light:hover, .btn.btn-light:focus, .btn.btn-light.active, .btn.active:hover,
+
+/* Owl Btn */
+
+.owl-buttons div:hover,
+
+/* Nav Tabs */
+
+.nav-tabs > li > a i,
+
+/* Panel */
+
+.panel-heading a,
+
+.panel-heading a:hover,
+
+/* Breadcrumbs */
+
+.breadcrumb > .active,
+
+/* Category Wisget */
+
+.widget-cat li a:focus, .widget-cat li a:hover,
+
+/* New */
+
+.navbar-default .navbar-nav > li > a:focus,
+
+.navbar-default .navbar-nav > li > a:hover, 
+
+.navbar-default .navbar-nav > li > a.active
+
+
+
+{
+
+	color: #eb6363;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------
+
+	***** Border Color *****
+
+--------------------------------*/
+
+.theme-color-owl-btn .owl-buttons div,
+
+/* pagination */
+
+.pagination > li > a:focus, 
+
+.pagination > li > a:hover,
+
+.pagination > li > a.active,
+
+.pagination > li > span:focus, 
+
+.pagination > li > span:hover,
+
+.pagination > li > span.active,
+
+/* Owl Pagination */
+
+/* Owl Btn */
+
+.theme-color-owl-btn .owl-buttons div:hover,
+
+.owl-page.active,
+
+/* Social Links */
+
+.social-links li a:hover, .social-links li a:focus, .social-links li a.active,
+
+/* Social Links Color */
+
+.social-links.color li a,
+
+/* Widget */
+
+.widget-tag > li a:hover, 
+
+.widget-tag > li a:focus, 
+
+.widget-tag > li a.active,
+
+/* Blockquote */
+
+blockquote,
+
+/*btn */
+
+.btn:hover, .btn:focus, .btn.active,
+
+.dropdown-menu, .sub-menu,
+
+/* Side widget */
+
+.widget h4,
+
+/* Border */
+
+.left-border-3,
+
+.attorney-detail-desc a
+
+{
+
+	border-color: #eb6363;
+
+}
+
+
+
+/* -------------------------------
+
+	***** Border Right Color *****
+
+--------------------------------*/
+
+.nav-tabs > li.active > a, 
+
+.nav-tabs > li.active > a:focus, 
+
+.nav-tabs > li.active > a:hover,
+
+.nav-tabs > li.active > a:before
+
+{
+
+	border-right-color: #eb6363;
+
+}
+
+
+
+
+
+
+
+/* -------------------------------
+
+	***** Tooltip Arrow *****
+
+--------------------------------*/
+
+.tooltip-theme-bg .tooltip.top .tooltip-arrow{
+
+	border-top-color:#eb6363 !important;
+
+}
+
+
+
+.tooltip-theme-bg .tooltip.bottom .tooltip-arrow{
+
+	border-bottom-color:#eb6363 !important;
+
+}
+
+
+
+.tooltip-theme-bg .tooltip.left .tooltip-arrow{
+
+	border-left-color:#eb6363 !important;
+
+}
+
+
+
+.tooltip-theme-bg .tooltip.right .tooltip-arrow{
+
+	border-right-color:#eb6363 !important;
+
+}
+
+
+
