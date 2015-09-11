@@ -2508,3 +2508,31 @@ blockquote p {
 #orange-layout .counter, #orange-layout .excellent-section{
 	color:#ffffff;
 }
+
+/* ==========================================================================
+ map-wrapper
+ ========================================================================== */
+
+#map-wrapper {
+
+}
+
+#map-wrapper {
+	height:440px;
+	box-shadow: 0px 0px 7px #555;
+	-moz-box-shadow:  0px 0px 7px #555;
+	-webkit-box-shadow:  0px 0px 7px #555;
+}
+
+
+#map-wrapper {
+/*
+	-webkit-transform: rotate(-3deg) !important;
+	-moz-transform: rotate(-3deg) !important;
+*/
+	width:100% !important; 
+/*	margin-left:-10% !important;*/
+/*	margin-top:100px !important;*/
+	border-bottom:solid 1px #ddd !important;
+}
+#map-wrapper:before, #map-wrapper:after {display:none;}

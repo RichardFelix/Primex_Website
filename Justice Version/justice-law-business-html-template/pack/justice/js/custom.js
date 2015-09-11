@@ -1,3 +1,106 @@
+
+
+    // -------------------------------------------------------------
+    // Google Map Customization
+    // -------------------------------------------------------------
+
+		jQuery(function ($) {
+			
+			'use strict';
+
+			var map;
+     
+			map = new GMaps({
+				div: '#map-wrapper',
+				lat: 40.741193,
+				lng:  -73.993081,
+				scrollwheel:false,
+				zoom: 16,
+				zoomControl : false,
+				panControl : false,
+				streetViewControl : false,
+				mapTypeControl: false,
+				overviewMapControl: false,
+				clickable: true
+			});
+            
+			var image = '';
+			map.addMarker({
+				lat: 40.741193,
+				lng:  -73.993081,
+				icon: image,
+				animation: google.maps.Animation.DROP,
+				verticalAlign: 'bottom',
+				horizontalAlign: 'center',
+				backgroundColor: '#d0cfd3',
+                infoWindow: {
+                  content: '<p style="color:black">PrimeX<br/>54 West 21 Street<br/>12 Floor<br/>New York, NY 10010</p>'
+                }   
+			})
+            
+//            google.maps.event.trigger(map.markers[0], 'click');
+            
+            
+			var styles = [ 
+
+			{
+				"featureType": "road",
+				"stylers": [
+				{ "color": "#ffffff" }
+				]
+			},{
+				"featureType": "water",
+				"stylers": [
+				{ "color": "#99b3cc" }
+				]
+			},{
+				"featureType": "landscape",
+				"stylers": [
+				{ "color": "#f2efe9" }
+				]
+			},{
+				"elementType": "labels.text.fill",
+				"stylers": [
+				{ "color": "#d3cfcf" }
+				]
+			},{
+				"featureType": "poi",
+				"stylers": [
+				{ "color": "#ded2ac" }
+				]
+			},{
+				"elementType": "labels.text",
+				"stylers": [
+				{ "saturation": 1 },
+				{ "weight": 0.1 },
+				{ "color": "#000000" }
+				]
+			}
+
+			];
+
+			map.addStyle({
+				styledMapName:"Styled Map",
+				styles: styles,
+				mapTypeId: "map_style"  
+			});
+
+			map.setStyle("map_style");
+            
+		}());
+
+	// -------------------------------------------------------------
+	// Collapse menu on click (only for mobile)
+	// -------------------------------------------------------------
+
+		$(function(){
+			$(".navbar-collapse a").click(function(){
+				$(".navbar-collapse").removeClass("in");
+				$(".navbar-collapse").css({'height': '0px'}); 
+			});
+		}());
+
+
 /* =================== Load Function =================== */
 $(window).load(function() {
     "use strict";
@@ -11,6 +114,8 @@ $(window).load(function() {
     });
 	"use strict";
     initPortfolioGrid();
+    
+    
 });
 /* =================== Load Function Ends =================== */
 
@@ -781,3 +886,4 @@ function valid_email_address(email) {
     var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
     return pattern.test(email);
 }
+
