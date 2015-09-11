@@ -108,12 +108,12 @@ $(window).load(function() {
     $(".loader-item").delay(700).fadeOut();
     $("#pageloader").delay(1000).fadeOut("slow");
     /* ----------- Pretty Photo ----------- */
-	"use strict";
-    $("a[data-rel^='prettyPhoto']").prettyPhoto({
-        deeplinking: false
-    });
-	"use strict";
-    initPortfolioGrid();
+//	"use strict";
+//    $("a[data-rel^='prettyPhoto']").prettyPhoto({
+//        deeplinking: false
+//    });
+//	"use strict";
+//    initPortfolioGrid();
     
     
 });
@@ -129,35 +129,35 @@ $(document).ready(function() {
 
 
 
-    //$('.input-name').enter(function() {
-	$(document).on( 'blur', '.subscibe', function(e){
-		"use strict";
-        var email = $("#subscribe_email").val();
-        if (!valid_email_address($("#subscribe_email").val())) {
-            $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');
-        } else {
-
-            $(".message").html("<span style='color:green;'>Adding your email address...</span>");
-            $.ajax({
-                url: 'mailchimp/subscribe.php',
-                data: {
-                    'email': email
-                },
-                type: 'POST',
-                success: function(msg) {
-                    if (msg == "success") {
-                        $("#subscribe_email").val("");
-                        $(".message").html('<span style="color:green;">You have successfully subscribed to our mailing list.</span>');
-
-                    } else {
-                        $(".message").html('something wrong.');
-                    }
-                }
-            });
-        }
-
-        return false;
-    });
+//    //$('.input-name').enter(function() {
+//	$(document).on( 'blur', '.subscibe', function(e){
+//		"use strict";
+//        var email = $("#subscribe_email").val();
+//        if (!valid_email_address($("#subscribe_email").val())) {
+//            $(".message").html('The email address you entered was invalid. Please make sure you enter a valid email address to subscribe.');
+//        } else {
+//
+//            $(".message").html("<span style='color:green;'>Adding your email address...</span>");
+//            $.ajax({
+//                url: 'mailchimp/subscribe.php',
+//                data: {
+//                    'email': email
+//                },
+//                type: 'POST',
+//                success: function(msg) {
+//                    if (msg == "success") {
+//                        $("#subscribe_email").val("");
+//                        $(".message").html('<span style="color:green;">You have successfully subscribed to our mailing list.</span>');
+//
+//                    } else {
+//                        $(".message").html('something wrong.');
+//                    }
+//                }
+//            });
+//        }
+//
+//        return false;
+//    });
 
 
 
@@ -265,13 +265,13 @@ $(document).ready(function() {
      Fixed Menu on Scroll
 
     --------------------------- */
-
-    $(function() {
-        "use strict";
-        $(".sticker").sticky({
-            topSpacing: 0
-        });
-    });
+//
+//    $(function() {
+//        "use strict";
+//        $(".sticker").sticky({
+//            topSpacing: 0
+//        });
+//    });
 
 
     /* ---------------------------
@@ -318,34 +318,34 @@ $(document).ready(function() {
 
     --------------------------- */
 
-    var loadtext = $('.load-more');
-	$(document).on( 'click', '.load-posts', function(e){
-		"use strict";
-        if ($(this).hasClass('disable')) return false;
-
-        $(this).html('<i class="fa fa-spin fa-spinner"></i> Loading');
-
-        var $hidden = loadtext.filter(':hidden:first').delay(600);
-
-        if (!$hidden.next('.load-more').length) {
-            $hidden.fadeIn(500);
-            $(this).addClass('disable');
-            $(this).fadeTo("slow", 0.23) /*.delay(600)*/
-                .queue(function(n) {
-                    $(this).html('All Posts Loaded <i class="icon-checkmark2"></i>');
-                    n();
-                }).fadeTo("slow", 1);
-
-        } else {
-            $hidden.fadeIn(500);
-            $(this).fadeTo("slow", 0.23) /*.delay(600)*/
-                .queue(function(g) {
-                    $(this).html('Load More Post <i class="icon-curved-arrow">');
-                    g();
-                }).fadeTo("slow", 1);
-
-        }
-    });
+//    var loadtext = $('.load-more');
+//	$(document).on( 'click', '.load-posts', function(e){
+//		"use strict";
+//        if ($(this).hasClass('disable')) return false;
+//
+//        $(this).html('<i class="fa fa-spin fa-spinner"></i> Loading');
+//
+//        var $hidden = loadtext.filter(':hidden:first').delay(600);
+//
+//        if (!$hidden.next('.load-more').length) {
+//            $hidden.fadeIn(500);
+//            $(this).addClass('disable');
+//            $(this).fadeTo("slow", 0.23) /*.delay(600)*/
+//                .queue(function(n) {
+//                    $(this).html('All Posts Loaded <i class="icon-checkmark2"></i>');
+//                    n();
+//                }).fadeTo("slow", 1);
+//
+//        } else {
+//            $hidden.fadeIn(500);
+//            $(this).fadeTo("slow", 0.23) /*.delay(600)*/
+//                .queue(function(g) {
+//                    $(this).html('Load More Post <i class="icon-curved-arrow">');
+//                    g();
+//                }).fadeTo("slow", 1);
+//
+//        }
+//    });
 
 
 
@@ -355,17 +355,17 @@ $(document).ready(function() {
 
     --------------------------- */
 
-$(".count-number").appear(function(){
-		$('.count-number').each(function(){
-			datacount = $(this).attr('data-count');
-			$(this).find('.counter').delay(6000).countTo({
-				from: 10,
-				to: datacount,
-				speed: 3000,
-				refreshInterval: 50,
-			});
-		});
-	});
+//$(".count-number").appear(function(){
+//		$('.count-number').each(function(){
+//			datacount = $(this).attr('data-count');
+//			$(this).find('.counter').delay(6000).countTo({
+//				from: 10,
+//				to: datacount,
+//				speed: 3000,
+//				refreshInterval: 50,
+//			});
+//		});
+//	});
 
 
     /* ---------------------------
@@ -374,35 +374,35 @@ $(".count-number").appear(function(){
 
     --------------------------- */
 
-    countDown();
-
-    function countDown() {
-		"use strict";
-        $('.countdown').each(function() {
-            var counter_id = $(this).attr('id');
-            var counter_type = $(this).data('counter');
-            var year = $(this).data('year');
-            var month = $(this).data('month');
-            var date = $(this).data('date');
-
-            var countDay = new Date();
-            countDay = new Date(year, month - 1, date);
-
-            if (counter_type == "down") {
-                $("#" + counter_id).countdown({
-                    labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
-                    labels1: ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'],
-                    until: countDay
-                });
-            } else if (counter_type == "up") {
-                $("#" + counter_id).countdown({
-                    labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
-                    labels1: ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'],
-                    since: countDay
-                });
-            }
-        });
-    }
+//    countDown();
+//
+//    function countDown() {
+//		"use strict";
+//        $('.countdown').each(function() {
+//            var counter_id = $(this).attr('id');
+//            var counter_type = $(this).data('counter');
+//            var year = $(this).data('year');
+//            var month = $(this).data('month');
+//            var date = $(this).data('date');
+//
+//            var countDay = new Date();
+//            countDay = new Date(year, month - 1, date);
+//
+//            if (counter_type == "down") {
+//                $("#" + counter_id).countdown({
+//                    labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
+//                    labels1: ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'],
+//                    until: countDay
+//                });
+//            } else if (counter_type == "up") {
+//                $("#" + counter_id).countdown({
+//                    labels: ['Years', 'Months', 'Weeks', 'Days', 'Hours', 'Mins', 'Secs'],
+//                    labels1: ['Year', 'Month', 'Week', 'Day', 'Hour', 'Min', 'Sec'],
+//                    since: countDay
+//                });
+//            }
+//        });
+//    }
 
 
 
@@ -519,37 +519,37 @@ $(".count-number").appear(function(){
 
     --------------------------- */
 
-    var dd = $('.text-scroll-slider').easyTicker({
-        direction: 'up',
-        easing: 'easeInOutExpo',
-        speed: 'slow',
-        interval: 3900,
-        height: 'auto',
-        visible: 1,
-        mousePause: 0,
-        controls: {
-            up: '.up',
-            down: '.down',
-            toggle: '.toggle',
-            stopText: 'Stop !!!'
-        }
-    }).data('easyTicker');
-
-    var dd1 = $('.template_path_tweets').easyTicker({
-        direction: 'up',
-        easing: 'easeInOutBack',
-        speed: 'slow',
-        interval: 2000,
-        height: 'auto',
-        visible: 3,
-        mousePause: 0,
-        controls: {
-            up: '.up',
-            down: '.down',
-            toggle: '.toggle',
-            stopText: 'Stop !!!'
-        }
-    }).data('easyTicker');
+//    var dd = $('.text-scroll-slider').easyTicker({
+//        direction: 'up',
+//        easing: 'easeInOutExpo',
+//        speed: 'slow',
+//        interval: 3900,
+//        height: 'auto',
+//        visible: 1,
+//        mousePause: 0,
+//        controls: {
+//            up: '.up',
+//            down: '.down',
+//            toggle: '.toggle',
+//            stopText: 'Stop !!!'
+//        }
+//    }).data('easyTicker');
+//
+//    var dd1 = $('.template_path_tweets').easyTicker({
+//        direction: 'up',
+//        easing: 'easeInOutBack',
+//        speed: 'slow',
+//        interval: 2000,
+//        height: 'auto',
+//        visible: 3,
+//        mousePause: 0,
+//        controls: {
+//            up: '.up',
+//            down: '.down',
+//            toggle: '.toggle',
+//            stopText: 'Stop !!!'
+//        }
+//    }).data('easyTicker');
 
     /* ---------------------------
 
@@ -557,24 +557,24 @@ $(".count-number").appear(function(){
 
     --------------------------- */
 
-    $(".element").each(function() {
-        var $this = $(this);
-        $this.typed({
-            strings: $this.attr('data-elements').split(','),
-            loop: true,
-            typeSpeed: 100, // typing speed
-            backDelay: 3000 // pause before backspacing
-        });
-    });
-
-    $.ajax({
-            method: "POST",
-            url: "twitter/tweet-api.php",
-            data: {}
-        })
-        .done(function(msg) {
-            $(".twitter").append(msg);
-        });
+//    $(".element").each(function() {
+//        var $this = $(this);
+//        $this.typed({
+//            strings: $this.attr('data-elements').split(','),
+//            loop: true,
+//            typeSpeed: 100, // typing speed
+//            backDelay: 3000 // pause before backspacing
+//        });
+//    });
+//
+//    $.ajax({
+//            method: "POST",
+//            url: "twitter/tweet-api.php",
+//            data: {}
+//        })
+//        .done(function(msg) {
+//            $(".twitter").append(msg);
+//        });
 
 
 
