@@ -8,109 +8,20 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
 	font-family: Flaticon;
-font-style: normal;
-}.flaticon-arrow395:before {
+       font-style: normal;
+}.flaticon-globe30:before {
 	content: "\e000";
 }
-.flaticon-boy15:before {
+.flaticon-house181:before {
 	content: "\e001";
 }
-.flaticon-boy46:before {
+.flaticon-notebook24:before {
 	content: "\e002";
 }
-.flaticon-boy56:before {
-	content: "\e003";
-}
-.flaticon-briefcase74:before {
-	content: "\e004";
-}
-.flaticon-briefcase85:before {
-	content: "\e005";
-}
-.flaticon-buy4:before {
-	content: "\e006";
-}
-.flaticon-chimney4:before {
-	content: "\e007";
-}
-.flaticon-comedy1:before {
-	content: "\e008";
-}
-.flaticon-criminal7:before {
-	content: "\e009";
-}
-.flaticon-exam:before {
-	content: "\e00a";
-}
-.flaticon-hammer8:before {
-	content: "\e00b";
-}
-.flaticon-heartbreak:before {
-	content: "\e00c";
-}
-.flaticon-house121:before {
-	content: "\e00d";
-}
-.flaticon-law:before {
-	content: "\e00e";
-}
-.flaticon-lover10:before {
-	content: "\e00f";
-}
-.flaticon-magnifying-glass34:before {
-	content: "\e010";
-}
-.flaticon-man323:before {
-	content: "\e011";
-}
-.flaticon-minus104:before {
-	content: "\e012";
-}
-.flaticon-notebook24:before {
-	content: "\e013";
-}
-.flaticon-pencil1:before {
-	content: "\e014";
-}
-.flaticon-plus79:before {
-	content: "\e015";
-}
-.flaticon-portfolio26:before {
-	content: "\e016";
-}
-.flaticon-portfolio7:before {
-	content: "\e017";
-}
-.flaticon-protection3:before {
-	content: "\e018";
-}
-.flaticon-rightarrow49:before {
-	content: "\e019";
-}
-.flaticon-rupee2:before {
-	content: "\e01a";
-}
-.flaticon-search74:before {
-	content: "\e01b";
-}
-.flaticon-speechbubble24:before {
-	content: "\e01c";
-}
 .flaticon-suitcase59:before {
-	content: "\e01d";
-}
-.flaticon-umbrella18:before {
-	content: "\e01e";
-}
-.flaticon-unrecognizable1:before {
-	content: "\e01f";
-}
-.flaticon-user60:before {
-	content: "\e020";
-}
-.flaticon-users86:before {
-	content: "\e021";
+	content: "\e003";
 }
