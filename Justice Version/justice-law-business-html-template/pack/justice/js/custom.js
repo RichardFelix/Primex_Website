@@ -222,6 +222,18 @@ $(document).ready(function() {
             event.preventDefault();
         });
     });
+    
+     $(function() {
+        "use strict";
+        $('#scroll').bind('click', function(event) {
+            var $anchor = $(this);
+            var headerH = $('#navigation-menu').outerHeight();
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top - 45 + "px"
+            }, 1200, 'easeInOutExpo');
+            event.preventDefault();
+        });
+    });
 
 
     /* ---------------------------
