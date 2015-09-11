@@ -1,9 +1,3 @@
-/*
-Theme Name: Justice
-Theme URI: ''
-Author: ''
-Author URI: ''
-*/
 
 
 /* =================================================================== 
@@ -37,7 +31,9 @@ Author URI: ''
 							GLOBAL STYLES
 							
 ------------------------------------------------------------------------*/
-
+#case-resolving {
+	background: url(../img/bg/bg2.jpg) no-repeat;
+}
 body, .tooltip-inner{
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing:antialiased !important;
@@ -51,6 +47,7 @@ body, .tooltip-inner{
 section{
 	padding: 95px 0;
 	overflow:hidden;
+    background-attachment: fixed !important;
 	position: relative;
 }
 .container{
@@ -2536,3 +2533,8 @@ blockquote p {
 	border-bottom:solid 1px #ddd !important;
 }
 #map-wrapper:before, #map-wrapper:after {display:none;}
+
+
+
+
+

@@ -584,95 +584,95 @@ $(".count-number").appear(function(){
      Social Feed
 
     --------------------------- */
-    locationSocialFeed();
-
-    function locationSocialFeed() {
-        var $ = jQuery,
-            socialFeed = $('.social-feed');
-
-        if (typeof($.fn.isotope) !== 'undefined') {
-            socialFeed.isotope({
-                itemSelector: '.isotope-item',
-            }).addClass('loaded');
-
-            $('#load-more').click(function() {
-                var item1, item2, item3, items, tmp;
-
-                items = socialFeed.find('.item-clone');
-                item1 = $(items[Math.floor(Math.random() * items.length)]).clone();
-                item2 = $(items[Math.floor(Math.random() * items.length)]).clone();
-                item3 = $(items[Math.floor(Math.random() * items.length)]).clone();
-                tmp = $().add(item1).add(item2).add(item3);
-
-                var images = tmp.find('img');
-
-                images.imagesLoaded(function() {
-                    return socialFeed.isotope('insert', tmp);
-                });
-            });
-        }
-    }
+//    locationSocialFeed();
+//
+//    function locationSocialFeed() {
+//        var $ = jQuery,
+//            socialFeed = $('.social-feed');
+//
+//        if (typeof($.fn.isotope) !== 'undefined') {
+//            socialFeed.isotope({
+//                itemSelector: '.isotope-item',
+//            }).addClass('loaded');
+//
+//            $('#load-more').click(function() {
+//                var item1, item2, item3, items, tmp;
+//
+//                items = socialFeed.find('.item-clone');
+//                item1 = $(items[Math.floor(Math.random() * items.length)]).clone();
+//                item2 = $(items[Math.floor(Math.random() * items.length)]).clone();
+//                item3 = $(items[Math.floor(Math.random() * items.length)]).clone();
+//                tmp = $().add(item1).add(item2).add(item3);
+//
+//                var images = tmp.find('img');
+//
+//                images.imagesLoaded(function() {
+//                    return socialFeed.isotope('insert', tmp);
+//                });
+//            });
+//        }
+//    }
 
     /* ---------------------------
 
      Social Photo Stream
 
     --------------------------- */
-    socialPhotostream();
-
-    function socialPhotostream() {
-        if ($(".my-feeds").length != 0) {
-            /* ================ FLICKR FEED ================ */
-            $('.flickr-feed').socialstream({
-                    socialnetwork: 'flickr',
-                    limit: 12,
-                    username: 'Envato'
-                })
-                /* ================ PINTEREST FEED ================ */
-            $('.pinterest-feed').socialstream({
-                    socialnetwork: 'pinterest',
-                    limit: 12,
-                    username: 'vmrkela'
-                })
-                /* ================ INSTAGRAM FEED ================ */
-            $('.instagram-feed').socialstream({
-                    socialnetwork: 'instagram',
-                    limit: 12,
-                    username: 'google'
-                })
-                /* ================ INSTAGRAM FOOTER FEED ================ */
-            $('.instagram-footer-feed').socialstream({
-                    socialnetwork: 'instagram',
-                    limit: 10,
-                    username: 'google'
-                })
-                /* ================ DRIBBBLE FEED ================ */
-            $('.dribbble-feed').socialstream({
-                    socialnetwork: 'dribbble',
-                    limit: 15,
-                    username: 'envato'
-                })
-                /* ================ NEWSFEED ================ */
-            $('.instagram-footer-feed').socialstream({
-                    socialnetwork: 'newsfeed',
-                    limit: 10,
-                    username: '#'
-                })
-                /* ================ PICASA FEED ================ */
-            $('.picasa-feed').socialstream({
-                socialnetwork: 'picasa',
-                limit: 15,
-                username: 'envato'
-            });
-            /* ================ YOUTUBE FEED ================ */
-            $('.youtube-feed').socialstream({
-                socialnetwork: 'youtube',
-                limit: 15,
-                username: 'Envato'
-            })
-
-        }
-    }
+//    socialPhotostream();
+//
+//    function socialPhotostream() {
+//        if ($(".my-feeds").length != 0) {
+//            /* ================ FLICKR FEED ================ */
+//            $('.flickr-feed').socialstream({
+//                    socialnetwork: 'flickr',
+//                    limit: 12,
+//                    username: 'Envato'
+//                })
+//                /* ================ PINTEREST FEED ================ */
+//            $('.pinterest-feed').socialstream({
+//                    socialnetwork: 'pinterest',
+//                    limit: 12,
+//                    username: 'vmrkela'
+//                })
+//                /* ================ INSTAGRAM FEED ================ */
+//            $('.instagram-feed').socialstream({
+//                    socialnetwork: 'instagram',
+//                    limit: 12,
+//                    username: 'google'
+//                })
+//                /* ================ INSTAGRAM FOOTER FEED ================ */
+//            $('.instagram-footer-feed').socialstream({
+//                    socialnetwork: 'instagram',
+//                    limit: 10,
+//                    username: 'google'
+//                })
+//                /* ================ DRIBBBLE FEED ================ */
+//            $('.dribbble-feed').socialstream({
+//                    socialnetwork: 'dribbble',
+//                    limit: 15,
+//                    username: 'envato'
+//                })
+//                /* ================ NEWSFEED ================ */
+//            $('.instagram-footer-feed').socialstream({
+//                    socialnetwork: 'newsfeed',
+//                    limit: 10,
+//                    username: '#'
+//                })
+//                /* ================ PICASA FEED ================ */
+//            $('.picasa-feed').socialstream({
+//                socialnetwork: 'picasa',
+//                limit: 15,
+//                username: 'envato'
+//            });
+//            /* ================ YOUTUBE FEED ================ */
+//            $('.youtube-feed').socialstream({
+//                socialnetwork: 'youtube',
+//                limit: 15,
+//                username: 'Envato'
+//            })
+//
+//        }
+//    }
     /* ----------------------------------
 
      Contact Form
@@ -715,116 +715,116 @@ $(".count-number").appear(function(){
 
 ----------------------------------- */
 
-window.onload = MapLoadScript;
-
-function GmapInit() {
-    Gmap = $('.map-canvas');
-    Gmap.each(function() {
-        var $this = $(this),
-            lat = -35.2835,
-            lng = 149.128,
-            zoom = 12,
-            scrollwheel = false,
-            zoomcontrol = true,
-            draggable = true,
-            mapType = google.maps.MapTypeId.ROADMAP,
-            title = '',
-            contentString = '',
-            dataLat = $this.data('lat'),
-            dataLng = $this.data('lng'),
-            dataZoom = $this.data('zoom'),
-            dataType = $this.data('type'),
-            dataScrollwheel = $this.data('scrollwheel'),
-            dataZoomcontrol = $this.data('zoomcontrol'),
-            dataHue = $this.data('hue'),
-            dataTitle = $this.data('title'),
-            dataContent = $this.data('content');
-
-        if (dataZoom !== undefined && dataZoom !== false) {
-            zoom = parseFloat(dataZoom);
-        }
-        if (dataLat !== undefined && dataLat !== false) {
-            lat = parseFloat(dataLat);
-        }
-        if (dataLng !== undefined && dataLng !== false) {
-            lng = parseFloat(dataLng);
-        }
-        if (dataScrollwheel !== undefined && dataScrollwheel !== null) {
-            scrollwheel = dataScrollwheel;
-        }
-        if (dataZoomcontrol !== undefined && dataZoomcontrol !== null) {
-            zoomcontrol = dataZoomcontrol;
-        }
-        if (dataType !== undefined && dataType !== false) {
-            if (dataType == 'satellite') {
-                mapType = google.maps.MapTypeId.SATELLITE;
-            } else if (dataType == 'hybrid') {
-                mapType = google.maps.MapTypeId.HYBRID;
-            } else if (dataType == 'terrain') {
-                mapType = google.maps.MapTypeId.TERRAIN;
-            }
-        }
-        if (dataTitle !== undefined && dataTitle !== false) {
-            title = dataTitle;
-        }
-        if (navigator.userAgent.match(/iPad|iPhone|Android/i)) {
-            draggable = false;
-        }
-
-        var mapOptions = {
-            zoom: zoom,
-            scrollwheel: scrollwheel,
-            zoomControl: zoomcontrol,
-            draggable: draggable,
-            center: new google.maps.LatLng(lat, lng),
-            mapTypeId: mapType
-        };
-        var map = new google.maps.Map($this[0], mapOptions);
-
-        var image = 'img/map-marker.png';
-        if (dataContent !== undefined && dataContent !== false) {
-            contentString = '<div class="map-data">' + '<h6>' + title + '</h6>' + '<div class="map-content">' + dataContent + '</div>' + '</div>';
-        }
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
-        });
-
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat, lng),
-            map: map,
-            icon: image,
-            title: title
-        });
-        if (dataContent !== undefined && dataContent !== false) {
-            google.maps.event.addListener(marker, 'click', function() {
-                infowindow.open(map, marker);
-            });
-        }
-
-        if (dataHue !== undefined && dataHue !== false) {
-            var styles = [{
-                stylers: [{
-                    hue: dataHue
-                }, {
-                    saturation: 80
-                }, {
-                    lightness: -10
-                }]
-            }];
-            map.setOptions({
-                styles: styles
-            });
-        }
-    });
-}
-
-
-function MapLoadScript() {
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=GmapInit';
-    document.body.appendChild(script);
-}
+//window.onload = MapLoadScript;
+//
+//function GmapInit() {
+//    Gmap = $('.map-canvas');
+//    Gmap.each(function() {
+//        var $this = $(this),
+//            lat = -35.2835,
+//            lng = 149.128,
+//            zoom = 12,
+//            scrollwheel = false,
+//            zoomcontrol = true,
+//            draggable = true,
+//            mapType = google.maps.MapTypeId.ROADMAP,
+//            title = '',
+//            contentString = '',
+//            dataLat = $this.data('lat'),
+//            dataLng = $this.data('lng'),
+//            dataZoom = $this.data('zoom'),
+//            dataType = $this.data('type'),
+//            dataScrollwheel = $this.data('scrollwheel'),
+//            dataZoomcontrol = $this.data('zoomcontrol'),
+//            dataHue = $this.data('hue'),
+//            dataTitle = $this.data('title'),
+//            dataContent = $this.data('content');
+//
+//        if (dataZoom !== undefined && dataZoom !== false) {
+//            zoom = parseFloat(dataZoom);
+//        }
+//        if (dataLat !== undefined && dataLat !== false) {
+//            lat = parseFloat(dataLat);
+//        }
+//        if (dataLng !== undefined && dataLng !== false) {
+//            lng = parseFloat(dataLng);
+//        }
+//        if (dataScrollwheel !== undefined && dataScrollwheel !== null) {
+//            scrollwheel = dataScrollwheel;
+//        }
+//        if (dataZoomcontrol !== undefined && dataZoomcontrol !== null) {
+//            zoomcontrol = dataZoomcontrol;
+//        }
+//        if (dataType !== undefined && dataType !== false) {
+//            if (dataType == 'satellite') {
+//                mapType = google.maps.MapTypeId.SATELLITE;
+//            } else if (dataType == 'hybrid') {
+//                mapType = google.maps.MapTypeId.HYBRID;
+//            } else if (dataType == 'terrain') {
+//                mapType = google.maps.MapTypeId.TERRAIN;
+//            }
+//        }
+//        if (dataTitle !== undefined && dataTitle !== false) {
+//            title = dataTitle;
+//        }
+//        if (navigator.userAgent.match(/iPad|iPhone|Android/i)) {
+//            draggable = false;
+//        }
+//
+//        var mapOptions = {
+//            zoom: zoom,
+//            scrollwheel: scrollwheel,
+//            zoomControl: zoomcontrol,
+//            draggable: draggable,
+//            center: new google.maps.LatLng(lat, lng),
+//            mapTypeId: mapType
+//        };
+//        var map = new google.maps.Map($this[0], mapOptions);
+//
+//        var image = 'img/map-marker.png';
+//        if (dataContent !== undefined && dataContent !== false) {
+//            contentString = '<div class="map-data">' + '<h6>' + title + '</h6>' + '<div class="map-content">' + dataContent + '</div>' + '</div>';
+//        }
+//        var infowindow = new google.maps.InfoWindow({
+//            content: contentString
+//        });
+//
+//        var marker = new google.maps.Marker({
+//            position: new google.maps.LatLng(lat, lng),
+//            map: map,
+//            icon: image,
+//            title: title
+//        });
+//        if (dataContent !== undefined && dataContent !== false) {
+//            google.maps.event.addListener(marker, 'click', function() {
+//                infowindow.open(map, marker);
+//            });
+//        }
+//
+//        if (dataHue !== undefined && dataHue !== false) {
+//            var styles = [{
+//                stylers: [{
+//                    hue: dataHue
+//                }, {
+//                    saturation: 80
+//                }, {
+//                    lightness: -10
+//                }]
+//            }];
+//            map.setOptions({
+//                styles: styles
+//            });
+//        }
+//    });
+//}
+//
+//
+//function MapLoadScript() {
+//    var script = document.createElement('script');
+//    script.type = 'text/javascript';
+//    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=GmapInit';
+//    document.body.appendChild(script);
+//}
 /*------------------- Onload Fuction Ends ---------------------------------------- */
 
 
@@ -834,65 +834,65 @@ function MapLoadScript() {
  Portfolio Filter
 
 ----------------------------------- */
-
-function initPortfolioGrid() {
-    $('.project-grid').each(function() {
-        var $port_container = $(this);
-
-        var filter_selector = $port_container.parent().find('.project-filters a.active').data('filter');
-
-        $port_container.isotope({
-            itemSelector: '.item',
-            filter: filter_selector,
-            animationEngine: "css",
-            masonry: {
-                columnWidth: '.grid-sizer'
-            }
-        });
-
-        // Portfolio Filter Items
-		$(document).on( 'click', '.project-filters a', function(e){
-            $(this).parent().parent().find('a.active').removeClass('active');
-            $(this).addClass('active');
-            var selector = $(this).parent().parent().find('a.active').attr('data-filter');
-            $(this).parents().find('.project-grid').isotope({
-                filter: selector,
-                animationEngine: "css"
-            });
-
-            return false;
-        });
-    });
-}
-var polarData = [{
-        value: 500,
-        color: "#3AACC6",
-        highlight: "#FF5A5E",
-        label: "Case Won"
-    }, {
-        value: 280,
-        color: "#73CDB4",
-        highlight: "#73CDB4",
-        label: "On Hold"
-    }, {
-        value: 420,
-        color: "#FDD3A9",
-        highlight: "#FFC870",
-        label: "Running Case"
-    }, {
-        value: 300,
-        color: "#FC8E77",
-        highlight: "#FC8E77",
-        label: "Case Dismiss"
-    },
-
-];
-if ($("#chart-area").length) {
-var ctx = document.getElementById("chart-area").getContext("2d");
-window.myPolarArea = new Chart(ctx).PolarArea(polarData, {
-            responsive: true
-        });
-		 }
+//
+//function initPortfolioGrid() {
+//    $('.project-grid').each(function() {
+//        var $port_container = $(this);
+//
+//        var filter_selector = $port_container.parent().find('.project-filters a.active').data('filter');
+//
+//        $port_container.isotope({
+//            itemSelector: '.item',
+//            filter: filter_selector,
+//            animationEngine: "css",
+//            masonry: {
+//                columnWidth: '.grid-sizer'
+//            }
+//        });
+//
+//        // Portfolio Filter Items
+//		$(document).on( 'click', '.project-filters a', function(e){
+//            $(this).parent().parent().find('a.active').removeClass('active');
+//            $(this).addClass('active');
+//            var selector = $(this).parent().parent().find('a.active').attr('data-filter');
+//            $(this).parents().find('.project-grid').isotope({
+//                filter: selector,
+//                animationEngine: "css"
+//            });
+//
+//            return false;
+//        });
+//    });
+//}
+//var polarData = [{
+//        value: 500,
+//        color: "#3AACC6",
+//        highlight: "#FF5A5E",
+//        label: "Case Won"
+//    }, {
+//        value: 280,
+//        color: "#73CDB4",
+//        highlight: "#73CDB4",
+//        label: "On Hold"
+//    }, {
+//        value: 420,
+//        color: "#FDD3A9",
+//        highlight: "#FFC870",
+//        label: "Running Case"
+//    }, {
+//        value: 300,
+//        color: "#FC8E77",
+//        highlight: "#FC8E77",
+//        label: "Case Dismiss"
+//    },
+//
+//];
+//if ($("#chart-area").length) {
+//var ctx = document.getElementById("chart-area").getContext("2d");
+//window.myPolarArea = new Chart(ctx).PolarArea(polarData, {
+//            responsive: true
+//        });
+//		 }
 
 function valid_email_address(email) {
     var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
