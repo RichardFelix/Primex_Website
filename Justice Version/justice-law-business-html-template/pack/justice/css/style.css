@@ -26,14 +26,13 @@
 	-Map 
 	-Footer
 17. OTHERS
+18. Parralex bg
 /* ----------------------------------------------------------------------
 
 							GLOBAL STYLES
 							
 ------------------------------------------------------------------------*/
-#case-resolving {
-	background: url(../img/bg/bg2.jpg) no-repeat;
-}
+
 body, .tooltip-inner{
 	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing:antialiased !important;
@@ -2534,7 +2533,16 @@ blockquote p {
 }
 #map-wrapper:before, #map-wrapper:after {display:none;}
 
+/***********************************************************
+  paralax bg
+/*************************************************************/
 
+#case-resolving {
+	background: url(../img/bg/bg2.jpg) no-repeat;
+}
 
+#consult{
+	background: url(../img/bg/bg3.jpg) no-repeat;
+}
 
 
