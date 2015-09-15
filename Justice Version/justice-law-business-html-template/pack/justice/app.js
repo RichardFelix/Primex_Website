@@ -1,54 +1,38 @@
-var http = require('http');
-var fs = require('fs');
-var path = require('path');
-function send404(response) {
-    
-    response.writeHead(404, { 'Content-Type': 'text/plain' });
-    response.write('Error 404: Resource not found.');
-    response.end();
-}
 
-var mimeLookup = {
-	".html" : "text/html",
-	".css" : "text/css",
-	".js" : "application/javascript",
-	".png" : "image/png",
-	".gif" : "image/gif",
-	".jpg" : "image/jpeg"
-};
+var http = require("http"),
+    url = require("url"),
+    path = require("path"),
+    fs = require("fs")
+    port = process.argv[2] || 3000;
 
-var server = http.createServer(function (req, res) {
-    if (req.method == 'GET') {
-    // resolve file path to filesystem path
-    var fileurl;
-    if (req.url == '/') fileurl = '/index3.html';
-    else fileurl = req.url;
-    var filepath = path.resolve('./' + fileurl);
-    // lookup mime type
-    var fileExt = path.extname(filepath);
-    var mimeType = mimeLookup[fileExt];
-        
-    if (!mimeType) {
-        send404(res);
-        return;
-    }   
-        
-    // see if we have that file
-    fs.exists(filepath, function (exists) {
-        // if not
-        if (!exists) {
-            send404(res);
-        return;
-    };
-        
-    // finally stream the file
-    res.writeHead(200, { 'content-type': mimeType });
-    fs.createReadStream(filepath).pipe(res);
-        
-});
-    }else {
-        send404(res);
+http.createServer(function(request, response) {
+
+  var uri = url.parse(request.url).pathname
+    , filename = path.join(process.cwd(), uri);
+  
+  fs.exists(filename, function(exists) {
+    if(!exists) {
+      response.writeHead(404, {"Content-Type": "text/plain"});
+      response.write("404 Not Found\n");
+      response.end();
+      return;
     }
-    
-}).listen(3000);
-console.log('server running on port 3000');
+
+    if (fs.statSync(filename).isDirectory()) filename += './index3.html';
+
+    fs.readFile(filename, "binary", function(err, file) {
+      if(err) {        
+        response.writeHead(500, {"Content-Type": "text/plain"});
+        response.write(err + "\n");
+        response.end();
+        return;
+      }
+
+      response.writeHead(200);
+      response.write(file, "binary");
+      response.end();
+    });
+  });
+}).listen(parseInt(port, 10));
+
+console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
