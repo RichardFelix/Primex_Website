@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
+  "author": "Richard Felix",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.13.3",

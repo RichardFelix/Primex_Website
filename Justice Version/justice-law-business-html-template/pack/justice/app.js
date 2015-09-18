@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var compression = require('compression');
 
+// gzip enabled for faster loading
 app.use(compression());
 
 // set the port of our application
