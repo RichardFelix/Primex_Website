@@ -3,7 +3,7 @@
 
   "version": "1.0.0",
  
- "description": "",
+ "description": "primex webiste",
   "main": "index.js",
   "scripts": {
     "start":"node app.js"
@@ -11,12 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-"body-parser": "^1.13.3",
-      
- "express": "^4.13.3",
-    
-  "sendgrid": "^1.9.2"
-
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "sendgrid": "^1.9.2"
   }
 }
  

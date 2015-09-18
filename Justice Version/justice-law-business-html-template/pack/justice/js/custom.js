@@ -21,7 +21,8 @@
 				streetViewControl : false,
 				mapTypeControl: false,
 				overviewMapControl: false,
-				clickable: true
+				clickable: true,
+                draggable: false 
 			});
             
 			var image = '';

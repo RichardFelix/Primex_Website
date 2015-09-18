@@ -1,4 +1,3 @@
-
 var express = require('express');
 var app = express();
 
@@ -31,11 +30,8 @@ app.use(express.static(__dirname + '/'));
               console.log('Success'); 
               res.redirect('/thank-you.html'); 
           }
-            
-//            console.log(json);
-           }
-        );
-        
+         }
+        ); 
     });
 
     // set the home page route
