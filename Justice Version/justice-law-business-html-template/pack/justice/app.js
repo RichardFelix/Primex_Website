@@ -1,5 +1,8 @@
 var express = require('express');
 var app = express();
+var compression = require('compression');
+
+app.use(compression());
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku

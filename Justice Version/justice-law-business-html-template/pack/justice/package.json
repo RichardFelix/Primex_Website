@@ -1,19 +1,17 @@
 {
- "name": "primex",
-
+  "name": "primex",
   "version": "1.0.0",
- 
- "description": "primex webiste",
+  "description": "primex webiste",
   "main": "index.js",
   "scripts": {
-    "start":"node app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
     "express": "^4.13.3",
     "sendgrid": "^1.9.2"
   }
 }
- 
