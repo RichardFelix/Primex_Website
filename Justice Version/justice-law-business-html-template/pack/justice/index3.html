@@ -393,12 +393,12 @@
                         <p class="form-message"></p>
                         <div class="text-center">
                             <!-- Form Begins -->
-                            <form class="transparent-form" id='form'  method="POST" action="/form">
+                            <form class="transparent-form  ws-validate" id='form'  method="POST" action="/form" >
                                 <div class="row">
                                     <!-- Field 1 -->	
                                     <div class="col-sm-6 animated">
                                         <div class="input-text form-group">
-                                            <input type="text" id="contact_name"  name="contact_name" class="form-control"   placeholder="Name" required />
+                                            <input type="text" id="contact_name"  name="contact_name" class="form-control"   placeholder="Name" required/>
                                         </div>
                                     </div>
                                     <!-- Field 2 -->
@@ -519,9 +519,32 @@
         <script src="js/gmaps.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+<!--        <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>-->
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript" src="js/jquery.appear.js"></script>
+        <script src="js/js-webshim/minified/polyfiller.js"></script>
+        <script>
+            (function () {
+                webshim.setOptions('forms', {
+        lazyCustomMessages: true,
+        iVal: {
+            sel: '.ws-validate',
+            handleBubble: 'hide', // hide error bubble
+
+            //add bootstrap specific classes
+            errorMessageClass: 'help-block',
+            successWrapperClass: 'has-success',
+            errorWrapperClass: 'has-error',
+
+            //add config to find right wrapper
+            fieldWrapper: '.form-group'
+        }
+    });
+
+    //load forms polyfill + iVal feature
+    webshim.polyfill('forms');
+})();
+        </script>
 <!--
         <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
         <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
