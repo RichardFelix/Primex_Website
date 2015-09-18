@@ -679,30 +679,30 @@ $(document).ready(function() {
      Contact Form
 
     ----------------------------------- */
-	$(document).on( 'click', '#sendingbtn', function(e){
-        var contact_name = $("#contact_name").val();
-        var contact_email = $("#contact_email").val();
-        var contact_message = $("#contact_message").val();
-        var contact_phoneno = $("#contact_phoneno").val();
-        $.ajax({
-
-            'url': 'process/mail.php',
-            'type': 'POST',
-            'data': {
-                contact_name: contact_name,
-                contact_email: contact_email,
-                contact_message: contact_message,
-                contact_phoneno: contact_phoneno
-            },
-            'success': function(data) {
-                $(".form-message").empty();
-				$(".form-message").css("display","block");
-                $(".form-message").append(data);
-            }
-        });
-
-
-    });
+//	$(document).on( 'click', '#sendingbtn', function(e){
+//        var contact_name = $("#contact_name").val();
+//        var contact_email = $("#contact_email").val();
+//        var contact_message = $("#contact_message").val();
+//        var contact_phoneno = $("#contact_phoneno").val();
+//        $.ajax({
+//
+//            'url': 'process/mail.php',
+//            'type': 'POST',
+//            'data': {
+//                contact_name: contact_name,
+//                contact_email: contact_email,
+//                contact_message: contact_message,
+//                contact_phoneno: contact_phoneno
+//            },
+//            'success': function(data) {
+//                $(".form-message").empty();
+//				$(".form-message").css("display","block");
+//                $(".form-message").append(data);
+//            }
+//        });
+//
+//
+//    });
 
     /*------------------- Contact Form Ends ---------------------------------------- */
 }); /*------------------- Ready Fuction Ends ---------------------------------------- */
