@@ -1,32 +1,4 @@
 
-
-/* =================================================================== 
-							CSS Structure 
-======================================================================
-1. GLOBAL STYLES
-   -Common Styles
-   -Page Loader	
-2. NAVIGATION MENU
-3. TEXT SLIDE SECTION
-4. WE ARE SECTION
-5. FEATURES SECTION
-6. COUNTER SECTION
-7. TEAM SECTION
-8. SKILLS SECTION
-9. RESPONSIVE SECTION
-10. SERVICES SECTION
-11. WORKING SECTION
-12. PRICING SECTION
-13. TESTIMONIAL SECTION
-14. CLIENTS SECTION
-15. PORTFOLIO SECTION
-    -Hover effects
-16. CONTACT SECTION
-	-Contact details
-	-Map 
-	-Footer
-17. OTHERS
-18. Parralex bg
 /* ----------------------------------------------------------------------
 
 							GLOBAL STYLES
@@ -39,10 +11,12 @@ body, .tooltip-inner{
 }
 .signika{font-family: 'Signika', sans-serif;}
 .cabin{font-family: 'Cabin', sans-serif;}
-.opensans{ font-family: 'Open Sans', sans-serif;}
+/*.opensans{ font-family: 'Open Sans', sans-serif;}*/
 .rale{ font-family: 'Raleway', sans-serif;}
+/*
 .bitter{font-family: 'Bitter', serif;}
 .titill{font-family: 'Titillium Web', sans-serif;}
+*/
 section{
 	padding: 95px 0;
 	overflow:hidden;
@@ -82,10 +56,13 @@ ul{
 }
 
 /* Animation */
+/*
 . { visibility:hidden; }
 .visible { visibility:visible; }
+*/
 
 /* Tooltip Styles */
+/*
 .tooltip-inner{
 	font-style: italic;	
 	padding: 10px 12px;
@@ -104,8 +81,10 @@ ul{
 .tooltip.bottom .tooltip-arrow{ border-bottom-color:#494949 !important; }
 .tooltip.left .tooltip-arrow{ border-left-color:#494949 !important; }
 .tooltip.right .tooltip-arrow{ border-right-color:#494949 !important; }
+*/
 
 /* Tooltip White */
+/*
 .tooltip-light .tooltip-inner{
 	background: #fff;
 	color: #222;
@@ -115,8 +94,10 @@ ul{
 .tooltip-light .tooltip.bottom .tooltip-arrow{ border-bottom-color:#fff !important; }
 .tooltip-light .tooltip.left .tooltip-arrow{ border-left-color:#fff !important; }
 .tooltip-light .tooltip.right .tooltip-arrow{ border-right-color:#fff !important; }
+*/
 	
 /* Tooltip Transparent */
+/*
 .tooltip-transparent .tooltip-inner{
 	background: transparent;
 	color: #fff;
@@ -126,24 +107,31 @@ ul{
 .tooltip-white-bg .tooltip.bottom .tooltip-arrow{ border-bottom-color: transparent !important; }
 .tooltip-white-bg .tooltip.left .tooltip-arrow{ border-left-color: transparent !important; }
 .tooltip-white-bg .tooltip.right .tooltip-arrow{ border-right-color: transparent !important; }
+*/
 /* Tooltip Transparent Dark Text */
-.tooltip-transparent .dark-text .tooltip-inner{ color: #333; }
+/*.tooltip-transparent .dark-text .tooltip-inner{ color: #333; }*/
 
 /* Tooltip Theme Color */
+/*
 .tooltip-theme-bg .tooltip-inner{
 	color: #fff;
 	opacity: 1;
 }
+*/
 
 /* Tooltip Space 10 */
+/*
 .tooltip-spc10 .tooltip.top{ margin-top:-10px; }
 .tooltip-spc10 .tooltip.bottom{ margin-top:10px; }
 .tooltip-spc10 .tooltip.left{ margin-right:10px; }
 .tooltip-spc10 .tooltip.right{ margin-left:10px; }
 	
+*/
 /* Close  */
+/*
 .close{ text-shadow: none; }
 .close:focus, .close:hover{ color: #da0000; }
+*/
 
 /* Float */
 .no-float{ float: none; }
@@ -295,8 +283,10 @@ ul{
 	bottom: -50%;
 }
 /* Load More */
+/*
 .load-more{ display: none; }
 .load-more.active{ display: block; }
+*/
 	
 	
 /* Hover Image Filter Img Style */
@@ -615,6 +605,7 @@ ul{
 
 /* -------- Social Stream Style ----------- */
 /* Flickr */
+/*
 .my-feeds li{
 	margin-bottom: 4px;
 	margin-right: 4px;
@@ -624,6 +615,7 @@ ul{
 	height: 60px;
 	width: 60px;
 }
+*/
 
 /* Button */
 .btn {
@@ -981,21 +973,26 @@ ul{
 	-o-background-size:cover!important;
 	-webkit-background-size:cover!important;
 }
+/*
 .slides-container .bg-1{
 	background:url(../img/bg/bg8.jpg) no-repeat;
 }
+*/
 .slides-container .bg-2{
 	background:url(../img/bg/bg4.jpg) no-repeat;
 }
+/*
 .slides-container .bg-3{
 	background:url(../img/bg/bg6.jpg) no-repeat;
 }
+*/
 .wide-container{
 	position:relative;
 }
 
 
 /* Accordions  */
+/*
 .panel-group{
 	padding: 30px 30px 9px;
 	border: 1px solid;
@@ -1044,6 +1041,7 @@ ul{
 .panel-title a.collapsed:before{
 	content: "+";
 }
+*/
 
 
 /* ------ Border radius 50% ----------- */
@@ -1315,6 +1313,7 @@ nav.navbar,
 }
 
 /* ---- Social Links ----- */
+/*
 .social-links li{
 	display: inline-block;
 	padding: 0 3px;
@@ -1343,11 +1342,15 @@ nav.navbar,
 	border: 1px solid ;
 	border-color: #cacfd3;
 }
+*/
 /* Dark Color Social */
+/*
 .social-links.dark li a{
 	color: #222;
 }
+*/
 /* Transparent Social */
+/*
 .social-links.transparent li a{
 	width: auto;
 	height: auto;
@@ -1369,14 +1372,17 @@ nav.navbar,
 	background: transparent;
 }
 
+*/
 
 /* Light Color Social */
+/*
 .social-links.light li a{
 	color: #cacfd3;
 }
 .social-links.no-icon-border li:after{
 	content: none;
 }
+*/
 /*================ Page Header ===========*/
 .page-header-section{
 	padding: 85px 0;
@@ -1448,6 +1454,7 @@ nav.navbar,
 =========================================*/
 
 /* ----- Sticky -------*/
+/*
 .sticker{
 	left: 0;
 	right: 0;
@@ -1459,6 +1466,7 @@ nav.navbar,
     top: 0;
     z-index: 9999;
 }
+*/
 
 /* Transparent Header */
 .navbar-transparent .navbar-default{
@@ -1555,6 +1563,7 @@ nav.navbar,
 }
 
 /* ----- Progress ---- */
+/*
 .progress{
 	height: 23px;
 	font-size: 12px;
@@ -1570,11 +1579,13 @@ nav.navbar,
     line-height: 22px;
     margin-right: 15px;
 }
+*/
 /* ---------------------------
 		
 		Counter 
 		
 ------------------------------ */
+/*
 .count-with-icon{
 	float: left;
 	width: 100%;
@@ -1594,6 +1605,7 @@ nav.navbar,
 	margin-left: 10px;
 	float: left;
 }
+*/
 
 
 /* ---------------------------
@@ -1601,6 +1613,7 @@ nav.navbar,
 		Countdown 
 		
 ------------------------------ */
+/*
 .countdown-section{
 	display: inline-block;
 	margin: 0 6px;
@@ -1635,6 +1648,7 @@ nav.navbar,
 	background: #222;
 	padding: 5px 8px;
 }
+*/
 
 
 /* ------- MAP -------- */
@@ -1642,12 +1656,15 @@ nav.navbar,
     width: 100%;
 }
 /* ====== SIDE BLOCK ======== */
+/*
 .widget{
 	float:left;
 	width: 100%;
 }
+*/
 
 /* Reply Container  */
+/*
 .comment{
 	float: left;
 	width: 100%;
@@ -1656,6 +1673,7 @@ nav.navbar,
 	width: 90%;
 	float: right;
 }
+*/
 /* =====================================
 
 			Hero
@@ -1769,14 +1787,19 @@ nav.navbar,
 	 Portfolio 
 		
 =================================*/
+/*
 .project-grid .grid-sizer { width: 33.3%; }
 .project-grid .mini-item { width: 25%;}
 .project-grid .mini-item.w2 { width: 50%; }	
 .project-grid .w3 { width: 33.34%; }
+*/
 /* 2 Column */
+/*
 .project-grid .grid-sizer.grid-sizer-2 { width: 50%; }
 .project-grid .w2 { width: 50%; }
+*/
 /* 4 Column */
+/*
 .project-grid .grid-sizer.grid-sizer-4 { width: 25%; }
 .project-grid .w4 { width: 25%; }
 .w4	.overlay-caption p{
@@ -1793,6 +1816,7 @@ nav.navbar,
 .portfolio-item img{
 	width:  100%;
 }
+*/
 /*===============================
 
 	 Attorney Section
@@ -1812,6 +1836,7 @@ nav.navbar,
 	margin-bottom: 20px;
 }
 
+/*
 .short-testimonial-client {
     margin-top: 10px;
     padding-bottom: 30px;
@@ -1822,6 +1847,7 @@ nav.navbar,
 	height: 90px;
 	width: 90px;
 }
+*/
 /* Attornet Style Shape */
 .attorney-detail-desc.shape *{
 	position: relative;
@@ -1862,6 +1888,7 @@ nav.navbar,
 	 Client Section
 		
 =================================*/
+/*
 .client-section{
 	border-width: 1px 0px;
 	border-style: solid;
@@ -1890,6 +1917,7 @@ nav.navbar,
 .client-slider .item img{
 	margin: 0 auto;
 }
+*/
 
 /*===============================
 
@@ -1900,6 +1928,7 @@ nav.navbar,
 	padding: 65px 0 20px;
 }
 /* Recent News */
+/*
 .short-news .foot-title,.footer-section .foot-title{
 	font-size: 22px;
 	margin: 0 0 20px;
@@ -1926,6 +1955,7 @@ nav.navbar,
 .short-news .caption-block h5 a{
 	color:#333;
 }
+*/
 /*  Copy Rights */
 .copy-rights{
 	padding: 25px 0 0px;
@@ -1946,6 +1976,7 @@ nav.navbar,
     width: 100%;
 }
 /* Twitter */
+/*
 li.tweet-item {
     padding-left: 61px;
     position: relative;
@@ -1978,6 +2009,7 @@ li.tweet-item::before {
     display: block;
     margin-bottom: 20px;
 }
+*/
 /* Free Consultant Section */
 .small-section{
 	padding: 60px 0 67px;
@@ -2019,6 +2051,7 @@ li.tweet-item::before {
 	margin-bottom:15px;
 }
 /* Blog */
+/*
 .blog-2-col img {
     float: left;
     max-width: 270px;
@@ -2034,7 +2067,7 @@ li.tweet-item::before {
 .blog-2-col .img-border-caption{
 	border-width: 1px 1px 1px 0px;
 }
-/* Blog List */
+ Blog List 
 .blog-list-caption.bottom-border{
 	border-width: 0px 0px 1px 0px;
 	border-style: solid;;
@@ -2043,9 +2076,11 @@ li.tweet-item::before {
 .blog-list img{
 	width:  100%;
 }
+*/
 
 
 /* Blog Small detail */
+/*
 .blog-sm-detail {
     display: inline-block;
     margin-top: -48px;
@@ -2055,7 +2090,9 @@ li.tweet-item::before {
 	width: 50px;
 	margin:  0 auto 15px;
 }
+*/
 /*  =========== Sidebar ============== */
+/*
 .widget h4{
 	margin: 0 0 20px;
 	font-size: 18px;
@@ -2067,7 +2104,7 @@ li.tweet-item::before {
 	font-weight: 500;
 	text-transform:  uppercase;
 }
-/* Category Widget */
+ Category Widget 
 .widget-cat li {
 	padding: 5px 0;
 }
@@ -2090,7 +2127,9 @@ li.tweet-item::before {
 .widget-cat li:hover a:before{
 	left: 5px;
 }
+*/
 /* Widget Tags */
+/*
 .widget-tag > li {
 	display: inline-block;;
     margin: 0 1px 4px 0;
@@ -2111,7 +2150,9 @@ li.tweet-item::before {
 .news-widget span{
 	font-size:13px;
 }
+*/
 /* Blog Single */
+/*
 .blog-section blockquote{
 	padding: 0 20px;
 }
@@ -2133,7 +2174,9 @@ blockquote p {
 	 font-size: 18px;
 	 font-weight: 500;
 }
+*/
 /* Comment Block */
+/*
 .comment-block img{
 	width: auto;
 	height: 75px;
@@ -2170,7 +2213,9 @@ blockquote p {
 .transparent-form .form-control::-webkit-input-placeholder{
 	color:#fff
 }
+*/
 /* ======== Feedback Section ======== */
+/*
 .feedback-block {
     padding-left: 90px;
 }
@@ -2182,7 +2227,9 @@ blockquote p {
     height: 66px ;
     width: 66px;
 }
+*/
 /* Left icon Block */
+/*
 .left-icon{
 	position:  relative;
 	padding-left:  130px
@@ -2194,9 +2241,38 @@ blockquote p {
     position: absolute;
     left: 0
 }
+*/
+/* ================= Contact Form ==============*/
+#consult .title-block.center-title .section-title{
+	font-weight:300;
+}
+#consult .title-block.white-title .description{
+	color:#dddddd;
+}
+#consult .transparent-form {
+    padding: 0 70px;
+}
+#consult .description {
+    padding: 20px 20% 0px;
+}
+#consult .margin60-bottom {
+    margin-bottom: 40px;
+}
 
+/*============Adivsory captions===================*/
+
+.attorney-caption a{
+	font-size:13px;
+}
+.attorney-caption .margin10-bottom{
+	margin-bottom:13px;
+}
+.attorney-caption h6{
+	padding:0px 0px 3px;
+}
 
 /* ================ Chart Block ============== */
+/*
 #chart-area{
 	position: relative;
 	z-index: 2;
@@ -2270,8 +2346,10 @@ blockquote p {
 	-moz-transform: rotate(8deg) skewX(8deg);
     width: 27%;
 }
+*/
 
 /* Index 3 File */
+/*
 .margin-edited .margin20-top {
     margin-top: 24px;
 }
@@ -2314,6 +2392,7 @@ blockquote p {
 .edit-test h6{
 	font-size:13px;
 }
+
 .copyright::after {
     background-color: #e8f0f5;
     content: "";
@@ -2333,7 +2412,7 @@ blockquote p {
 	padding:20px 0px;
 }
 
-
+*/
 /* Index File */
 .slider .image-bg{
 	background-position:50% 0;
@@ -2352,12 +2431,15 @@ blockquote p {
 .top-bar a:hover{
 	color:#eeeeee;
 }
+/*
 #orange-layout .navbar-default .navbar-nav > li > a{
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.5px;
 	text-transform:capitalize;
 }
+*/
+/*
 .top-social li i{
 	font-size:12px;
 }
@@ -2387,10 +2469,13 @@ blockquote p {
     font-weight: 600;
 	text-transform:capitalize;
 }
+*/
+/*
 .excellent-section h3{
 	font-family: "Titillium Web",sans-serif;
 	font-weight: 600;
 }
+*/
 .attorney-detail-desc  h4{
 	padding-top: 10px;
 	margin-bottom:30px;
@@ -2409,7 +2494,9 @@ blockquote p {
 .attorney-detail-desc:hover  a.btn-sm,
 .attorney-detail-block:hover a.btn-sm {
 	color:#ffffff;
+
 }
+/*
 #Latest .blog-sm-detail span{
 	font-family: "Bitter",serif;
 	color:#768083;
@@ -2435,8 +2522,10 @@ blockquote p {
 	width:150px;
 	border:0px;
 }
+*/
 
 /* Red Layout */
+/*
 #red-layout .navbar-nav > li > a{
 	font-weight:700;
 }
@@ -2487,6 +2576,7 @@ blockquote p {
 #red-layout .footer-section .social-links li{
 	padding:0px;
 }
+*/
 
 /* Blue Layout */
 #blue-layout .hero-content h1{
