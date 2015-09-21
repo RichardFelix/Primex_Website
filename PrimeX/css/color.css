@@ -119,11 +119,6 @@ background-color:#175c85;
 }
 
 
-
-
-
-
-
 /* -------------------------------
 	***** Border Color *****
 --------------------------------*/
@@ -170,26 +165,5 @@ blockquote,
 .nav-tabs > li.active > a:before
 {
 	border-right-color: #175C85;
-}
-
-
-
-/* -------------------------------
-	***** Tooltip Arrow *****
---------------------------------*/
-.tooltip-theme-bg .tooltip.top .tooltip-arrow{
-	border-top-color:#175C85 !important;
-}
-
-.tooltip-theme-bg .tooltip.bottom .tooltip-arrow{
-	border-bottom-color:#175C85 !important;
-}
-
-.tooltip-theme-bg .tooltip.left .tooltip-arrow{
-	border-left-color:#175C85 !important;
-}
-
-.tooltip-theme-bg .tooltip.right .tooltip-arrow{
-	border-right-color:#175C85 !important;
 }
 
