@@ -122,7 +122,7 @@ $(document).ready(function() {
         paginationSpeed: 400,
         pagination: false,
         singleItem: true,
-        navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+        //navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         autoPlay: true
     });
 
