@@ -1,0 +1,58 @@
+{
+  "name": "please-wait",
+  "module": "please-wait",
+  "author": {
+    "name": "Pathgather",
+    "email": "tech@pathgather.com"
+  },
+  "description": "Display a nice loading screen while your app loads",
+  "homepage": "https://github.com/Pathgather/please-wait",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pathgather/please-wait.git"
+  },
+  "main": "build/please-wait.js",
+  "version": "0.0.5",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-compass": "~1.0.1",
+    "grunt-coffeelint": "~0.0.13",
+    "grunt-contrib-coffee": "~0.12.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-jasmine": "~0.8.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "gitHead": "e920f1273d04617a0c32233fcf1e8affb4c384bc",
+  "bugs": {
+    "url": "https://github.com/Pathgather/please-wait/issues"
+  },
+  "_id": "please-wait@0.0.5",
+  "scripts": {},
+  "_shasum": "67098ce6260e92e0809e2d3b7c23f1d167dad960",
+  "_from": "please-wait@*",
+  "_npmVersion": "1.4.28",
+  "_npmUser": {
+    "name": "pathgather",
+    "email": "tech@pathgather.com"
+  },
+  "maintainers": [
+    {
+      "name": "pathgather",
+      "email": "tech@pathgather.com"
+    }
+  ],
+  "dist": {
+    "shasum": "67098ce6260e92e0809e2d3b7c23f1d167dad960",
+    "tarball": "http://registry.npmjs.org/please-wait/-/please-wait-0.0.5.tgz"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/please-wait/-/please-wait-0.0.5.tgz"
+}
