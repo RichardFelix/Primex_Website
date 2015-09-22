@@ -45,15 +45,6 @@ $(document).ready(function() {
         });
     }
 
-//    /* ---------------------------
-//
-//     Tooltips Calling
-//
-//    --------------------------- */
-//	"use strict";
-//    $('[data-toggle="tooltip"]').tooltip();
-
-
     /* ---------------------------
 
      Scroll Navigation 
@@ -83,32 +74,7 @@ $(document).ready(function() {
             event.preventDefault();
         });
     });
-
-
-    /* ---------------------------
-
-     Animation
-
-    --------------------------- */
-//    $(function() {
-//        "use strict";
-//        $('.animated').appear(function() {
-//            var elem = $(this);
-//            var animation = elem.data('animation');
-//            if (!elem.hasClass('visible')) {
-//                var animationDelay = elem.data('animation-delay');
-//                if (animationDelay) {
-//                    setTimeout(function() {
-//                        elem.addClass(animation + " visible");
-//                    }, animationDelay);
-//                } else {
-//                    elem.addClass(animation + " visible");
-//                }
-//            }
-//        });
-//    });
-
-
+    
     /* ---------------------------
 
      Owl Slider
@@ -122,7 +88,6 @@ $(document).ready(function() {
         paginationSpeed: 400,
         pagination: false,
         singleItem: true,
-        //navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
         autoPlay: true
     });
 
