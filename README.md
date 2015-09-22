@@ -17,7 +17,7 @@ http://primex123.herokuapp.com
 * Google Maps API
 * HTML
 * CSS
-**
+
 ## Screen Shots ##
 
 ### Mobile ###
