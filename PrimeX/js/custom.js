@@ -35,9 +35,9 @@ $(document).ready(function() {
         pageSection.each(function(indx) {
             if ($(this).attr("data-background")) {
                  if(jQuery.browser.mobile){  
-                     $('#bg').attr('data-background', 'img/bg/bgMobile.jpg');
+                     $('#bg').attr('data-background', 'img/bg/bgMobile1.jpg');
                  }else{
-                     $('#bg').attr('data-background', 'img/bg/bg1.jpg');
+                     $('#bg').attr('data-background', 'img/bg/bg11.jpg');
                  }    
     
                 $(this).css("background-image", "url(" + $(this).data("background") + ")");
