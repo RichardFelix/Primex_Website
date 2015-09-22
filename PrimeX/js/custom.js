@@ -31,7 +31,7 @@ $(document).ready(function() {
         bgImage();
 
     function bgImage() {
-        var pageSection = $(".image-bg, .parallax-bg");
+        var pageSection = $(".image-bg");
         pageSection.each(function(indx) {
             if ($(this).attr("data-background")) {
                  if(jQuery.browser.mobile){  
