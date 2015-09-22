@@ -1,6 +1,6 @@
 # PrimeX Website#
 
-This is my repository for the new website for this investment firm.
+This is my repository for the fully responsive website for the PrimeX investment firm.
 
 ### Tools and Technology used ###
 
@@ -19,4 +19,5 @@ Desktop
 ![DesktopScreenShot.PNG](https://bitbucket.org/repo/qGRB8b/images/640422125-DesktopScreenShot.PNG)
 
 Mobile
+
 ![MobileScreenShot.PNG](https://bitbucket.org/repo/qGRB8b/images/994532240-MobileScreenShot.PNG)
