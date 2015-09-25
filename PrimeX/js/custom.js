@@ -45,6 +45,16 @@ $(document).ready(function() {
             }
         });
     }
+    
+    /*----------------------------------
+    
+      Form sizing on large displays
+    
+    ------------------------------------*/
+    if($(window).width() > 1500){
+        $('#formid').attr('class', 'col-md-8 col-md-offset-3 col-lg-6 ');
+    }
+        
 
     /* ---------------------------
 
