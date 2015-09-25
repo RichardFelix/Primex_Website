@@ -145,7 +145,7 @@ ul{
 }
 .left-middle-block1{
 	position: absolute;
-	left: 0;
+	left: 1%;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	   -moz-transform: translateY(-50%);
