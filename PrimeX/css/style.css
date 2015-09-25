@@ -20,7 +20,7 @@ section{
 	position: relative;
 }
 .container{
-	max-width:1170px;
+	max-width:1670px;
 	width:100%;
 }
 
@@ -135,15 +135,15 @@ ul{
 }
 .left-middle-block{
 	position: absolute;
-	left: 0;
-	top: 50%;
+	left: 10%;
+	top: 40%;
 	-webkit-transform: translateY(-50%);
 	   -moz-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
 	     -o-transform: translateY(-50%);
 			transform: translateY(-50%);
 }
-.left-middle-block{
+.left-middle-block1{
 	position: absolute;
 	left: 0;
 	top: 50%;
@@ -153,6 +153,7 @@ ul{
 	     -o-transform: translateY(-50%);
 			transform: translateY(-50%);
 }
+
 .right-middle-block{
 	position: absolute;
 	right: 0;
@@ -778,9 +779,6 @@ ul{
 	-webkit-background-size:cover!important;
 }
 
-.slides-container .bg-2{
-	background:url(../img/bg/bg4.jpg) no-repeat;
-}
 
 .wide-container{
 	position:relative;

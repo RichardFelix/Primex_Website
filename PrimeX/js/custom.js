@@ -36,6 +36,7 @@ $(document).ready(function() {
             if ($(this).attr("data-background")) {
                  if(jQuery.browser.mobile){  
                      $('#bg').attr('data-background', 'img/bg/bgMobile1.jpg');
+                     $('.hero-content').attr('class','hero-content left-middle-block1 z-index9');
                  }else{
                      $('#bg').attr('data-background', 'img/bg/bg11.jpg');
                  }    
