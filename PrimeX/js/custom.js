@@ -54,7 +54,7 @@ $(document).ready(function() {
     if($(window).width() > 1500){
         $('#formid').attr('class', 'col-md-8 col-md-offset-3 col-lg-6 ');
     }
-        
+
 
     /* ---------------------------
 
@@ -64,19 +64,7 @@ $(document).ready(function() {
 
     $(function() {
         "use strict";
-        $('.scroll').bind('click', function(event) {
-            var $anchor = $(this);
-            var headerH = $('#navigation-menu').outerHeight();
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 45 + "px"
-            }, 1200, 'easeInOutExpo');
-            event.preventDefault();
-        });
-    });
-    
-     $(function() {
-        "use strict";
-        $('#scroll').bind('click', function(event) {
+        $('.scroll' || '#scroll').bind('click', function(event) {
             var $anchor = $(this);
             var headerH = $('#navigation-menu').outerHeight();
             $('html, body').stop().animate({
