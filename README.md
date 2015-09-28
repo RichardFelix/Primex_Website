@@ -21,7 +21,7 @@ http://primex123.herokuapp.com
 ## Screen Shots ##
 
 ### Mobile ###
-![bgMobile.PNG](https://bitbucket.org/repo/qGRB8b/images/1647458619-bgMobile.PNG)
+![bgMobile.PNG](https://bitbucket.org/repo/qGRB8b/images/1213292930-bgMobile.PNG)
 
 ### Desktop ###
 ![bg.PNG](https://bitbucket.org/repo/qGRB8b/images/831391750-bg.PNG)
