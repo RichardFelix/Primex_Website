@@ -569,5 +569,163 @@
 
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+ .dropdown:hover > .dropdown-menu, .dropdown-menu .dropdown:hover > .sub-menu, .dropdown:hover > .jus-megamenu-wrapper {
 
+		visibility: hidden;	
+
+		animation-name: fadeIn;
+
+		-moz-animation-name: fadeIn;
+
+		-webkit-animation-name: fadeIn;
+
+		-o-animation-name: fadeIn;
+
+		-ms-animation-name: fadeIn;
+
+		animation-duration: 0.6s;
+
+		-moz-animation-duration: 0.6s;
+
+		-webkit-animation-duration: 0.6s;
+
+		-o-animation-duration: 0.6s;
+
+		-ms-animation-duration: 0.6s;
+
+		animation-fill-mode: both;
+
+		-moz-animation-fill-mode: both;
+
+		-webkit-animation-fill-mode: both;
+
+		-o-animation-fill-mode: both;
+
+		-ms-animation-fill-mode: both;
+
+	}
+
+	.dropdown-menu {
+
+		border: none;
+
+		background: #FFFFFF;
+
+		min-width: 190px;
+
+		padding:0;	
+
+		border-radius: 0px;
+
+		-moz-border-radius: 0px;
+
+		-webkit-border-radius: 0px;
+
+		-o-border-radius: 0px;
+
+		-ms-border-radius: 0px;
+
+		display: block;
+
+		opacity: 0;
+
+		visibility: hidden;		
+
+	}
+
+	.dropdown-menu, .dropdown-menu .sub-menu, .jus-megamenu-container {
+
+		box-shadow:none;
+
+		-moz-box-shadow: none;
+
+		-webkit-box-shadow: none;
+
+		-o-box-shadow: none;
+
+		-ms-box-shadow:none;
+
+	}
+
+	.dropdown-menu li {
+
+		position:relative;
+
+	}
+
+	.dropdown-menu > li > a, .dropdown-menu .sub-menu a {
+
+		padding: 5px 10px;
+
+		color:#000;
+
+	}
+
+	.dropdown-menu .sub-menu {
+
+		position: absolute;
+
+		top: 0;    
+
+		padding: 0;
+
+		margin:0;
+
+		min-width: 180px;
+
+		list-style: none;
+
+		display: block;
+
+		opacity: 0;
+
+		visibility: hidden;
+
+		}
+
+	.jus-main-nav.navbar-nav li:last-child .dropdown-menu .sub-menu {
+
+		right: 100%;
+
+		left:auto;
+
+	}
+
+	.dropdown-menu .sub-menu a {
+
+		clear: both;   
+
+		display: block;
+
+		line-height: 1.42857;  
+
+	}
+
+	.dropdown-menu .sub-menu li:hover > a {
+
+		color:#000;
+
+	}
+
+	.nav-tabs .dropdown-menu, .nav-pills .dropdown-menu, .navbar .dropdown-menu {
+
+		margin-top: 0;
+
+	}
+
+	.nav > li > a.dropdown-toggle{
+
+		display: none;
+
+	}
+
+	.dropdown-menu > li > a.dropdown-toggle{
+
+		display: none;
+
+	}
+	
+}
 
