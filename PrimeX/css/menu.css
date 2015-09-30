@@ -471,7 +471,6 @@
 /* Mobile Menu Width Changes */
 
 @media (max-width: 991px) {
-
 	
     .navbar-header {
 
@@ -906,6 +905,7 @@
         
         padding-top: 90px;
     }
-	
+    
+    
 }
 
