@@ -20,7 +20,7 @@ section{
 	position: relative;
 }
 .container{
-	max-width:1360px;
+	max-width:85%;/*1360px;*/
 	width:100%;
 }
 
