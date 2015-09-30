@@ -420,12 +420,19 @@ ul{
 .pad60-left{ padding-left: 60px;}
 .pad60-right{ padding-right: 60px;}
 
-/* Padding 60px */
+/* Padding 80px */
 .pad80{ padding: 80px; }
-.pad80-top{ padding-top: 80px; }
+.pad80-top{ padding-top: 90px; }
 .pad80-bottom{ padding-bottom: 80px;}
 .pad80-left{ padding-left: 80px;}
 .pad80-right{ padding-right: 80px;}
+
+/* Padding 120px */
+.pad120{ padding: 120px; }
+.pad120-top{ padding-top: 120px; }
+.pad120-bottom{ padding-bottom: 120px;}
+.pad120-left{ padding-left: 120px;}
+.pad120-right{ padding-right: 120px;}
 	
 
 /* ------------- margin ---------- */
