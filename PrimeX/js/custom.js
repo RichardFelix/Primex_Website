@@ -33,7 +33,7 @@ $(document).ready(function() {
     function bgImage() {
         if(jQuery.browser.mobile  ){  
             $('.container').css("max-width", "96%");
-            $('.image-bg').css("background-image", 'url(../img/bg/bgMobile2.jpg)');  
+            $('.image-bg').css("background-image", 'url(../img/bg/bgMobile1.jpg)');  
             $('.hero-content').attr('class','hero-content left-middle-block1 z-index9');
         }  
     }
