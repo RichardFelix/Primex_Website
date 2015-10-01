@@ -20,7 +20,7 @@ app.use(express.static(__dirname + '/'));
     app.post('/form', function(req, res){
         
         sendgrid.send({
-          to:       'rfelixmail@gmail.com',
+          to:       'info@primexprime.com',
           from:     'info@primexprime.com',
           name:     req.body.contact_name,
           subject:  'Primex Contact Form',
