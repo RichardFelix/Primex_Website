@@ -4,7 +4,7 @@
 
 This is my repository for the fully responsive website for the PrimeX investment firm. 
 
-## SiteLink ##
+## Site Link ##
 http://www.primexprime.com
 
 ## Tools and Technology used ##
