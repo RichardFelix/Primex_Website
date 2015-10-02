@@ -2,10 +2,10 @@
 
 ## Summary ##
 
-This is my repository for the fully responsive website for the PrimeX investment firm.  This site has been deployed to Heroku and will be linked to the firms main site after some content editing is done.
+This is my repository for the fully responsive website for the PrimeX investment firm. 
 
-## Demo Link ##
-http://primex123.herokuapp.com
+## SiteLink ##
+http://www.primexprime.com
 
 ## Tools and Technology used ##
 
