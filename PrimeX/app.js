@@ -1,6 +1,7 @@
-var express = require('express');
-var app = express();
-var compression = require('compression');
+var express = require('express'),
+    app = express(),
+    compression = require('compression'),
+    config = require('./config/config.js');
 
 // gzip enabled for faster loading
 app.use(compression());
@@ -9,44 +10,54 @@ app.use(compression());
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 3000,
     bodyParser = require('body-parser'),
-    sendgrid  = require('sendgrid')('XXXXX', 'XXXXX');
+    sendgrid  = require('sendgrid')(config.sendgridUser, config.sendgridPwd);
 
 app.use(bodyParser.urlencoded({ extended: true })); 
 
 // make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
-    //submit form function
-    app.post('/form', function(req, res){
+//submit form function
+app.post('/form', function(req, res){
         
-        sendgrid.send({
-          to:       'info@primexprime.com',
-          from:     'info@primexprime.com',
-          name:     req.body.contact_name,
-          subject:  'Primex Contact Form',
-          html:     '<h1>PrimeX Website Contact Form</h1>  <b>NAME:</b> ' + req.body.contact_name + '<br/><br/><b>EMAIL:</b> ' +req.body.contact_email + '<br/><br/> <b>PHONE:</b> ' + req.body.contact_phoneno + ' <br/><br/> <b>MESSAGE:</b> ' + req.body.contact_message 
+    sendgrid.send({
+      to:       'info@primexprime.com',
+      from:     'info@primexprime.com',
+      name:     req.body.contact_name,
+      subject:  'Primex Contact Form',
+      html:     '<h1>PrimeX Website Contact Form</h1>  <b>NAME:</b> ' + req.body.contact_name + '<br/><br/><b>EMAIL:</b> ' +req.body.contact_email + '<br/><br/> <b>PHONE:</b> ' + req.body.contact_phoneno + ' <br/><br/> <b>MESSAGE:</b> ' + req.body.contact_message 
             
-        }, function(err, json) {
+    }, function(err, json) {
             
-          if (err) { 
-              return console.error(err); 
-          }else{ 
-              console.log('Success'); 
-              res.redirect('/thank-you.html'); 
-          }
-         }
-        ); 
-    });
+      if (err) { 
+          return console.error(err); 
+      }else{ 
+          console.log('Success'); 
+          res.redirect('/thank-you.html'); 
+      }
+     }
+    ); 
+});
 
-    // set the home page route
-    app.get("/", function (req, res) {
-      res.redirect("/index3.html");
-    });
+//register
+app.post('/register', function(req, res){
+        
+});
 
-    // redirect if error 404 or any other 
-    app.use(function(req, res){
-      res.redirect("/index3.html");
-    });
+//login
+app.post('/login', function(req, res){
+        
+});    
+
+// set the home page route
+app.get("/", function (req, res) {
+    res.redirect("index3.html");
+});
+
+// redirect if error 404 or any other 
+app.use(function(req, res){
+  res.redirect("index3.html");
+});
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
