@@ -39,7 +39,7 @@ app.post('/changePassword', function(req, res){
         User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         console.log(err);
         if(err)
-            return res.redirect('/login');
+            return res.render('broker-login', {exists: 1, email: req.body.email });
         
         passport.authenticate('local')(req, res, function(){ // using local strat and hash password
             res.render('broker-success');

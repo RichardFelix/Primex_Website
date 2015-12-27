@@ -1,7 +1,7 @@
 module.exports = function(app, config, sendgrid){
     
     app.get('/login', function(req, res){
-        res.render('broker-login');
+        res.render('broker-login', { email: '' });
     });
     
     app.get("/", function (req, res) {
@@ -46,7 +46,7 @@ module.exports = function(app, config, sendgrid){
     
     app.get('/logout', function(req, res){
         req.logout(); // how to destroy session
-        res.render('broker-login');
+        res.render('broker-login', { email: '' });
     });
     
     // Contact form 
