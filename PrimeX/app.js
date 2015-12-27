@@ -3,21 +3,19 @@ var express = require('express'),
     compression = require('compression'),
     config = require('./config/config.js'),
     session = require('express-session'),
-    mongoose = require('mongoose'),
     passport = require('passport'),
     localStrategy = require('passport-local'),
     localMongoose = require('passport-local-mongoose'),
     port = process.env.PORT || 3000,
     bodyParser = require('body-parser'),
     sendgrid  = require('sendgrid')(config.sendgridUser, config.sendgridPwd),
-    User = require('./models/user');
+    User = require('./models/user'),
+    Email = require('./models/email');;
 
 app.set('view engine', 'ejs');
 
 // gzip enabled for faster loading
 app.use(compression());
-
-mongoose.connect('mongodb://localhost/primex');
 
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
@@ -58,14 +56,30 @@ app.post('/form', function(req, res){
     ); 
 });
 
-//register
-app.post('/register', function(req, res){
-    User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and hashes password
+//Change Passsword
+app.get('/changePassword',function(req, res){
+    res.render('changePassword')
+});
+
+app.post('/changePassword', function(req, res){
+        User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and hashes password
+        console.log(err);
         if(err)
             return res.redirect('/login');
         
         passport.authenticate('local')(req, res, function(){ // using local strat and hash password
-            console.log('shit worked');
+            res.render('broker-success');
+        })       
+    })
+});
+
+//register
+app.post('/register', Email.findOne);
+
+// SendGRID
+//function(req, res){
+    
+    
 //            sendgrid.send({
 //              to:       req.body.email,
 //              from:     'info@primexprime.com',
@@ -77,10 +91,7 @@ app.post('/register', function(req, res){
 //              if (err)
 //                  return console.error(err);    
 //            });
-            
-        });        
-    });
-});
+//});
 
 //login
 app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
@@ -107,7 +118,7 @@ function isLoggedIn(req, res, next){ // custom middle ware that check it a user 
 //logout
 app.get('/logout', function(req, res){
     req.logout(); // how to destroy session
-    res.redirect('/');
+    res.render('broker-login');
 });
 
 // set the home page route

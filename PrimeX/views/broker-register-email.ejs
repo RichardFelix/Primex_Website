@@ -4,68 +4,19 @@
     <%- include('partials/head.ejs') %>
     
     <body id="blue-layout">
-        <!-- Header Begins -->
-        <header id="header" class="navbar-light">
-                <nav class="navbar navbar-default no-margin  navbar-fixed-top">
-                    <div class="container relative">
-                        <div class="navbar-header">
-                            <!-- Mobile View Menu Toogle Btn -->
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <img src="img/hamburger.png">
-                            </button>
-                            <!-- Site Logo -->
-                            <a class="navbar-brand vertical-left-align-middle-block" href="index3.html" id="scroll"><img alt="logo" src="img/logo-color.png"></a>
-                        </div>
-                        <!-- Nav Menu -->
-                        <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav navbar-right">
-                                <!-- Dropdown Menu begins -->
-                                <li class="dropdown"><a href="index3.html" class="scroll">Home</a> </li>
-                                <li class="dropdown"><a href="index3.html#about" class="scroll">About Firm</a></li>
-                                <li class="dropdown"><a href="index3.html#practise" class="scroll">Services</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="services.html#estate">Real Estate</a></li>
-                                        <li><a href="services.html#sales">Sales &amp; Trading</a></li>
-                                        <li><a href="services.html#wealth">Wealth Management</a></li>
-                                        <li><a href="services.html#global">Investment Banking</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="index3.html#advisory" class="scroll">Advisory Approach</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="advisory.html#you">Understanding You</a></li>
-                                        <li><a href="advisory.html#asset">Allocating Assets</a></li>
-                                        <li><a href="advisory.html#track">Tracking Progress</a></li>
-                                        <li><a href="advisory.html#implement">Portfolio Strategy</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="index3.html#consult" class="scroll">Contact</a></li>
-                                <li class="dropdown"><a href="login.html" class="scroll">Login</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="http://www.sterneageeaccountaccess.com" target="_blank">Client Login</a></li>
-                                        <li><a href="broker-login.html">Financial Advisor</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <!-- Right navbar Ends -->
-                        </div>
-                        <!--/.nav-collapse -->
-                    </div>
-                    <!--/.container-fluid -->
-                </nav>
-                <!-- nav Ends -->
-        </header>
-        <!-- Header Ends -->
+        <%- include('partials/nav.ejs') %>
+        
         <!-- Page Header -->
         <div id="page-header" class="page-header-section section-light margin40-top">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-tile-block">
-                            <h2 class="">Contact Us</h2>
+                            <h2 class="">Financial Adivsor Login</h2>
                         </div>
                         <ol class="breadcrumb">
-                            <li><a href="index3.html">Home</a></li>
-                            <li class="active">Contact Us</li>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Financial Adivsor Login</li>
                         </ol>
                     </div>
                 </div>
@@ -75,8 +26,6 @@
         <!-- Section Begins -->
         <section id="about" class="about-section border-hidden">
             <div class="container">
-                <!-- Title Block -->
-                <!-- Title Ends -->
                 <!-- Content Begins -->  
                 <div class="row">
                     <!-- Block Begins -->
@@ -84,6 +33,8 @@
                          <div class="content-block text-justify">
                             <center>
                                  <h2 class=" text32 text300 no-margin">Check your email for your temporary password.</h2>
+                                 <div class='pad30-top'></div>
+                                 <button type="button" class="btn btn-default active" onclick="window.location='/login'">Login</button>
                             </center>
                         </div>     
                     </div>   
