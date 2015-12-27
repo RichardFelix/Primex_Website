@@ -113,6 +113,12 @@
                             <input type="email" class="form-control" id="email" name='email' required placeholder="Enter email">
                           </div>
                         </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-2" for="email">Password:</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="password" name='password' required placeholder="Enter Password">
+                          </div>
+                        </div>
                         <div class="form-group">        
                           <div class="col-sm-offset-2 col-sm-6">
                             <button type="submit" class="btn btn-default active">Submit</button>
@@ -162,18 +168,6 @@
             });
             webshim.polyfill('forms');
         })();
-        
-        function checkPhone(evt) {
-            evt = (evt) ? evt : window.event
-            var charCode = (evt.which) ? evt.which : evt.keyCode
-            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-                status = "This field accepts numbers only."
-                return false
-            }
-            status = ""
-
-            return true;
-        }
         </script>
     </body>
 </html>
