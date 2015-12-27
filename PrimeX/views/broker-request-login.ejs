@@ -4,7 +4,6 @@
     <%- include('partials/head.ejs') %>
     
     <body id="blue-layout">
-        
         <%- include('partials/nav.ejs') %>
         
         <!-- Page Header -->
@@ -13,11 +12,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="page-tile-block">
-                            <h2 class="">Financial Advisor Login</h2>
+                            <h2 class="">Financial Adivsor Login</h2>
                         </div>
                         <ol class="breadcrumb">
                             <li><a href="/">Home</a></li>
-                            <li class="active">Change Password</li>
+                            <li class="active">Financial Adivsor Login</li>
                         </ol>
                     </div>
                 </div>
@@ -29,19 +28,37 @@
             <div class="container">
                 <!-- Content Begins -->  
                 <div class="row">
+                    <!-- Block Begins -->
+                    <div class="col-sm-12">
+                         <div class="content-block text-justify">
+                            <center>
+                                 <h2 class=" text32 text300 no-margin">Request Access</h2>
+                                 <div class='pad30-top'></div>
+                            </center>
+                        </div>     
+                    </div>   
+                </div>
+            </div>
+                <div class="row">
                     <div class="text-center">
                     <!-- Block Begins -->
-                    <form class="form-horizontal ws-validate" role="form" method='POST' action='/changePassword'>
+                    <form class="form-horizontal ws-validate" role="form" method='POST' action='/request'>
                         <div class="form-group">
-                          <label class="control-label col-sm-2" for="email">Email:</label>
-                          <div class="col-sm-6">
-                            <input type="email" class="form-control" id="email" name='email' required value='<%= email %>'>
+                          <label class="control-label col-sm-3" for="name">Name:</label>
+                          <div class="col-sm-6">          
+                            <input type="text" class="form-control" id="name" name='name' required placeholder="Enter Name">
                           </div>
                         </div>
                         <div class="form-group">
-                          <label class="control-label col-sm-2" for="pwd">Create a Password:</label>
+                          <label class="control-label col-sm-3" for="email">Email:</label>
+                          <div class="col-sm-6">
+                            <input type="email" class="form-control" id="email" name='email' required placeholder="Enter Email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-sm-3" for="id">Broker ID:</label>
                           <div class="col-sm-6">          
-                            <input type="password" class="form-control" id="pwd" name='password' required placeholder="create a password">
+                            <input type="text" class="form-control" id="id" name='id' required placeholder="Enter a Broker ID">
                           </div>
                         </div>
                         <div class="form-group">        
@@ -52,9 +69,6 @@
                       </form>
                     </div>
                    </div>
-                    <!-- Block Ends -->
-                </div>
-            <!-- container -->
         </section>
 
         <%- include('partials/loginFooter.ejs') %>

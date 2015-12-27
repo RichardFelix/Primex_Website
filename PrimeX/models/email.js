@@ -1,9 +1,8 @@
 var mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    User = require('./user'),
     config = require('../config/config');
 
-mongoose.connect(config.mongoLocation);
+mongoose.connect(config.mongoLocation_dev);
 
 var emailSchema = mongoose.Schema({
     email: String
@@ -16,9 +15,10 @@ var findOne = function(req, res){
                 if(err)
                     throw err;
                 else
-                    if(user.length == 0)
-                        res.send( 'Your email not in system contact system administrator' );
-                    else
+                    if(user.length == 0){
+                        console.log( 'Your email not in system contact system administrator' );
+                        res.render('broker-request-login');
+                    }else
                         res.render( 'changePassword', { email: req.body.email } );
             });
 };

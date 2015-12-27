@@ -34,35 +34,9 @@ passport.use(new localStrategy({
 passport.serializeUser(User.serializeUser());   // passport uses this to encode the session info
 passport.deserializeUser(User.deserializeUser());  // passport uses this to decode the session info
 
-//submit form function
-app.post('/form', function(req, res){
-        
-    sendgrid.send({
-      to:       'info@primexprime.com',
-      from:     'info@primexprime.com',
-      name:     req.body.contact_name,
-      subject:  'Primex Contact Form',
-      html:     '<h1>PrimeX Website Contact Form</h1>  <b>NAME:</b> ' + req.body.contact_name + '<br/><br/><b>EMAIL:</b> ' +req.body.contact_email + '<br/><br/> <b>PHONE:</b> ' + req.body.contact_phoneno + ' <br/><br/> <b>MESSAGE:</b> ' + req.body.contact_message 
-            
-    }, function(err, json) {
-            
-      if (err) { 
-          return console.error(err); 
-      }else{ 
-          console.log('Success'); 
-          res.render('thank-you'); 
-      }
-     }
-    ); 
-});
-
 //Change Passsword
-app.get('/changePassword',function(req, res){
-    res.render('changePassword')
-});
-
 app.post('/changePassword', function(req, res){
-        User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and hashes password
+        User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         console.log(err);
         if(err)
             return res.redirect('/login');
@@ -76,32 +50,11 @@ app.post('/changePassword', function(req, res){
 //register
 app.post('/register', Email.findOne);
 
-// SendGRID
-//function(req, res){
-    
-    
-//            sendgrid.send({
-//              to:       req.body.email,
-//              from:     'info@primexprime.com',
-//              name:     req.body.email,
-//              subject:  'Primex Temporary Password',
-//              html:     '<b>Primex Temporary Password</b>: primex123'
-//
-//            }, function(err, json) {
-//              if (err)
-//                  return console.error(err);    
-//            });
-//});
-
 //login
 app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
     successRedirect: '/success',
     failureRedirect: '/login'
 }), function(req, res){
-});
-
-app.get('/login', function(req, res){
-    res.render('broker-login');
 });
 
 app.get('/success', isLoggedIn, function(req, res){ // using my custom middleware to tell if the req is authenticated if so keep going if not redirect to home
@@ -115,54 +68,8 @@ function isLoggedIn(req, res, next){ // custom middle ware that check it a user 
         res.redirect('/login');
 }
 
-//logout
-app.get('/logout', function(req, res){
-    req.logout(); // how to destroy session
-    res.render('broker-login');
-});
-
-// set the home page route
-app.get("/", function (req, res) {
-    res.render('index3');
-});
-
-//ROUTES ------------------
-app.get('/services', function(req, res){
-    res.render('services');
-});
-
-app.get('/advisory', function(req, res){
-    res.render('advisory');
-});
-
-app.get('/login-main', function(req, res){
-    res.render('login')
-});
-
-app.get('/about', function(req, res){
-    res.render('about-firm')
-});
-
-app.get('/privacy', function(req, res){
-    res.render('privacy')
-});
-
-app.get('/business', function(req, res){
-    res.render('business')
-});
-
-app.get('/risks', function(req, res){
-    res.render('risks')
-});
-
-app.get('/register', function(req, res){
-    res.render('broker-register');
-});
-
-// redirect if error 404 or any other 
-app.use(function(req, res){
-  res.redirect("/");
-});
+//Routes ( non passport related )
+require('./routes')(app, config, sendgrid);
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
