@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%- include('partials/head.ejs') %>
+    
+    <body id="blue-layout">
+        <!-- Header Begins -->
+        <header id="header" class="navbar-light">
+                <nav class="navbar navbar-default no-margin  navbar-fixed-top">
+                    <div class="container relative">
+                        <div class="navbar-header">
+                            <!-- Mobile View Menu Toogle Btn -->
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <img src="img/hamburger.png">
+                            </button>
+                            <!-- Site Logo -->
+                            <a class="navbar-brand vertical-left-align-middle-block" href="#header" id="scroll"><img alt="logo" src="img/logo-color.png"></a>
+                        </div>
+                        <!-- Nav Menu -->
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <!-- Dropdown Menu begins -->
+                                <li class="dropdown"><a href="#header" class="scroll">Home</a> </li>
+                                <li class="dropdown"><a href="#about" class="scroll">About Firm</a></li>
+                                <li class="dropdown"><a href="#practise" class="scroll">Services</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/services#estate">Real Estate</a></li>
+                                        <li><a href="/services#sales">Sales &amp; Trading</a></li>
+                                        <li><a href="/services#wealth">Wealth Management</a></li>
+                                        <li><a href="/services#global">Investment Banking</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#advisory" class="scroll">Advisory Approach</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/advisory#you">Understanding You</a></li>
+                                        <li><a href="/advisory#asset">Allocating Assets</a></li>
+                                        <li><a href="/advisory#track">Tracking Progress</a></li>
+                                        <li><a href="/advisory#implement">Portfolio Strategy</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="#consult" class="scroll">Contact</a></li>
+                                <li class="dropdown"><a href="/login-main" class="scroll">Login</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="http://www.sterneageeaccountaccess.com" target="_blank">Client Login</a></li>
+                                        <li><a href="/login">Financial Advisor</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- Right navbar Ends -->
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                    <!--/.container-fluid -->
+                </nav>
+                <!-- nav Ends -->
+        </header>
+        <!-- Header Ends -->
+        
+        <%- include('partials/index.ejs') %>
+	    <%- include('partials/footer.ejs') %>
+        <%- include('partials/scripts.ejs') %>
+        
+    </body>
+</html>

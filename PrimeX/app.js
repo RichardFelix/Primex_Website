@@ -12,6 +12,8 @@ var express = require('express'),
     sendgrid  = require('sendgrid')(config.sendgridUser, config.sendgridPwd),
     User = require('./models/user');
 
+app.set('view engine', 'ejs');
+
 // gzip enabled for faster loading
 app.use(compression());
 
@@ -50,7 +52,7 @@ app.post('/form', function(req, res){
           return console.error(err); 
       }else{ 
           console.log('Success'); 
-          res.redirect('/thank-you.html'); 
+          res.render('thank-you'); 
       }
      }
     ); 
@@ -58,7 +60,7 @@ app.post('/form', function(req, res){
 
 //register
 app.post('/register', function(req, res){
-    User.register(new User({username: req.body.email}), 'primex123',  function(err, user){ // creates a new user and hashes password
+    User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and hashes password
         if(err)
             return res.redirect('/login');
         
@@ -88,11 +90,11 @@ app.post('/login', passport.authenticate('local', { // this middleware is checki
 });
 
 app.get('/login', function(req, res){
-    res.redirect('/broker-login.html');
+    res.render('broker-login');
 });
 
 app.get('/success', isLoggedIn, function(req, res){ // using my custom middleware to tell if the req is authenticated if so keep going if not redirect to home
-    res.redirect('/broker-success.html');
+    res.render('broker-success');
 });
 
 function isLoggedIn(req, res, next){ // custom middle ware that check it a user is already logged in or not
@@ -110,12 +112,45 @@ app.get('/logout', function(req, res){
 
 // set the home page route
 app.get("/", function (req, res) {
-    res.redirect("index3.html");
+    res.render('index3');
+});
+
+//ROUTES ------------------
+app.get('/services', function(req, res){
+    res.render('services');
+});
+
+app.get('/advisory', function(req, res){
+    res.render('advisory');
+});
+
+app.get('/login-main', function(req, res){
+    res.render('login')
+});
+
+app.get('/about', function(req, res){
+    res.render('about-firm')
+});
+
+app.get('/privacy', function(req, res){
+    res.render('privacy')
+});
+
+app.get('/business', function(req, res){
+    res.render('business')
+});
+
+app.get('/risks', function(req, res){
+    res.render('risks')
+});
+
+app.get('/register', function(req, res){
+    res.render('broker-register');
 });
 
 // redirect if error 404 or any other 
 app.use(function(req, res){
-  res.redirect("index3.html");
+  res.redirect("/");
 });
 
 app.listen(port, function() {
