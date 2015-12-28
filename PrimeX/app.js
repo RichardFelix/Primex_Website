@@ -34,8 +34,8 @@ passport.use(new localStrategy({
 passport.serializeUser(User.serializeUser());   // passport uses this to encode the session info
 passport.deserializeUser(User.deserializeUser());  // passport uses this to decode the session info
 
-//Change Passsword
-app.post('/changePassword', existsNupdate, function(req, res){
+//----------------------Change Passsword 
+app.post('/changePassword', existsNdelete, function(req, res){
         User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         console.log(err);
         if(err)
@@ -47,7 +47,8 @@ app.post('/changePassword', existsNupdate, function(req, res){
     })
 });
 
-function existsNupdate(req, res, next){
+// custom middle ware to find if a user is exists if so delete it so it can be reregistered
+function existsNdelete(req, res, next){ 
     User.find({ username: req.body.email }, function(err, user) {
       if (err) 
           throw err;
@@ -62,10 +63,10 @@ function existsNupdate(req, res, next){
     })
 };
   
-//register
-app.post('/register', Email.findOne);  // newEmail function to put a new Email in emails colletions && findOne for production ***FIX THIS***
+//----------------------------Register
+app.post('/register', Email.findOne);  // newEmail function to put a new Email in emails colletions && findOne for production 
 
-//login
+//------------------------------Login
 app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
     successRedirect: '/success',
     failureRedirect: '/login'
@@ -76,18 +77,16 @@ app.get('/success', isLoggedIn, function(req, res){ // using my custom middlewar
     res.render('broker-success');
 });
 
-function isLoggedIn(req, res, next){ // custom middle ware that check it a user is already logged in or not
+// custom middle ware that check it a user is already logged in or not
+function isLoggedIn(req, res, next){
     if(req.isAuthenticated())
         return next(); // allows route to go to the next function in its list
     else
         res.redirect('/login');
 }
 
-//Routes ( non passport related )
+//--------------------------------Routes ( non passport related )
 require('./routes')(app, config, sendgrid);
-
-// Password Recovery Form
-//app.post('/recovery', Email.);
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);

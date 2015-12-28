@@ -52,25 +52,6 @@
         </section>
 
         <%- include('partials/loginFooter.ejs') %>
-
-        <script src="js/js-webshim/minified/polyfiller.js"></script>
-        <script> 
-            /* form validation code */
-            (function () {
-                webshim.setOptions('forms', {
-                    lazyCustomMessages: true,
-                    iVal: {
-                        sel: '.ws-validate',
-                        handleBubble: 'hide',
-
-                        errorMessageClass: 'help-block',
-                        successWrapperClass: 'has-success',
-                        errorWrapperClass: 'has-error',
-                        fieldWrapper: '.form-group'
-                }
-            });
-            webshim.polyfill('forms');
-        })();
-        </script>
+        
     </body>
 </html>

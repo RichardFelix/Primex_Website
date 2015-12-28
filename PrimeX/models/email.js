@@ -39,6 +39,5 @@ var newEmail = function(req,res){
 module.exports = {
     findOne,
     newEmail,
-    mongoose,
-    Email
+    mongoose
 }
