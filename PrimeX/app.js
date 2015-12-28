@@ -35,11 +35,11 @@ passport.serializeUser(User.serializeUser());   // passport uses this to encode 
 passport.deserializeUser(User.deserializeUser());  // passport uses this to decode the session info
 
 //Change Passsword
-app.post('/changePassword', function(req, res){
+app.post('/changePassword', existsNupdate, function(req, res){
         User.register(new User({username: req.body.email}), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         console.log(err);
         if(err)
-            return res.render('broker-login', {exists: 1, email: req.body.email });
+            return res.render('broker-login', {email: req.body.email });
         
         passport.authenticate('local')(req, res, function(){ // using local strat and hash password
             res.render('broker-success');
@@ -47,8 +47,23 @@ app.post('/changePassword', function(req, res){
     })
 });
 
+function existsNupdate(req, res, next){
+    User.find({ username: req.body.email }, function(err, user) {
+      if (err) 
+          throw err;
+        
+      User.remove({ username: req.body.email }, function(err) {
+        if (err) 
+            throw err;
+
+        console.log('User successfully deleted!');
+        return next();
+      })
+    })
+};
+  
 //register
-app.post('/register', Email.findOne);
+app.post('/register', Email.findOne);  // newEmail function to put a new Email in emails colletions && findOne for production ***FIX THIS***
 
 //login
 app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
@@ -70,6 +85,9 @@ function isLoggedIn(req, res, next){ // custom middle ware that check it a user 
 
 //Routes ( non passport related )
 require('./routes')(app, config, sendgrid);
+
+// Password Recovery Form
+//app.post('/recovery', Email.);
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);

@@ -41,13 +41,17 @@ module.exports = function(app, config, sendgrid){
     });
     
     app.get('/changePassword',function(req, res){
-        res.render('changePassword')
+        res.render('changePassword', { email: '' })
     });
     
     app.get('/logout', function(req, res){
         req.logout(); // how to destroy session
         res.render('broker-login', { email: '' });
     });
+    
+    app.get('/recovery', function(req, res){
+        res.render('password-recovery');
+    });    
     
     // Contact form 
     app.post('/form', function(req, res){

@@ -2,7 +2,7 @@ var mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
     config = require('../config/config');
 
-mongoose.connect(config.mongoLocation_dev);
+mongoose.connect(config.mongoLocation_dev); // mongoLocation_dev for development && mongoLocation_production for production
 
 var emailSchema = mongoose.Schema({
     email: String
@@ -39,5 +39,6 @@ var newEmail = function(req,res){
 module.exports = {
     findOne,
     newEmail,
-    mongoose
+    mongoose,
+    Email
 }
