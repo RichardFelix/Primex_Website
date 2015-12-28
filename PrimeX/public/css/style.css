@@ -1,3 +1,26 @@
+/***********************************************************
+  background images
+/*************************************************************/
+
+#case-resolving {
+	background: url(../img/bg/bg2.jpg) no-repeat;
+    background-size:cover
+}
+
+#consult{
+	background: url(../img/bg/bg3.jpg) no-repeat;
+    background-size:cover
+}
+
+#questions{
+	background: url(../img/bg/bg4.jpg) no-repeat;
+    background-size:cover
+}
+
+.image-bg {
+    background: url(../img/bg/bg11.jpg) no-repeat;
+    background-size:cover
+}
 
 /* ----------------------------------------------------------------------
 
@@ -1543,27 +1566,4 @@ nav.navbar,
 }
 #map-wrapper:before, #map-wrapper:after {display:none;}
 
-/***********************************************************
-  background images
-/*************************************************************/
-
-#case-resolving {
-	background: url(../img/bg/bg2.jpg) no-repeat;
-    background-size:cover
-}
-
-#consult{
-	background: url(../img/bg/bg3.jpg) no-repeat;
-    background-size:cover
-}
-
-#questions{
-	background: url(../img/bg/bg4.jpg) no-repeat;
-    background-size:cover
-}
-
-.image-bg {
-    background: url(../img/bg/bg11.jpg) no-repeat;
-    background-size:cover
-}
 
