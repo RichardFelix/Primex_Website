@@ -5,7 +5,7 @@ module.exports = function(app, config, sendgrid){
     });
     
     app.get("/", function (req, res) {
-        res.render('index3');
+        res.render('index');
     });
 
     app.get('/services', function(req, res){
