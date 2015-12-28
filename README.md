@@ -15,6 +15,7 @@ http://www.primexprime.com
 * Node.js
 * Express
 * Ejs
+* MongoDB
 * Google Maps API
 * HTML
 * CSS
