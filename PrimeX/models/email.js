@@ -17,7 +17,7 @@ var findOne = function(req, res){
                 else
                     if(user.length == 0){
                         console.log( 'Your email not in system contact system administrator' );
-                        res.render('broker-request-login');
+                        res.render('broker-request-login', { email: req.body.email } );
                     }else
                         res.render( 'changePassword', { email: req.body.email } );
             });

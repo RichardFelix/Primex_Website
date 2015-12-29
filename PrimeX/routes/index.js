@@ -83,7 +83,7 @@ module.exports = function(app, config, sendgrid){
             from:     'info@primexprime.com',
             name:     req.body.id,
             subject:  'Primex Login Request',
-            html:     `<h2><b>Primex Login Request</b> <br /><br /> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br /> <b>Brokers ID     :</b>${req.body.id} <br /></h2>`
+            html:     `<h2><b>Primex Login Request</b> <br /><br /> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br /></h2>`
 
             }, function(err, json) {
                  if (err)

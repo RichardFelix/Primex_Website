@@ -35,7 +35,6 @@ $(document).ready(function() {
             $('.container').css("max-width", "96%");
             $('.image-bg').css("background-image", 'url(../img/bg/bgMobile1.jpg)');  
             $('.hero-content').attr('class','hero-content left-middle-block1 z-index9');
-            $('.register').addClass('pad40-top'); //adding padding to register button
         }  
     }
     
