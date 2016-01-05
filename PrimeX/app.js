@@ -19,7 +19,7 @@ var express = require('express'),
 //----------------------App Settings--------------------------------\\
 //////////////////////////////////////////////////////////////////////
 // mongoose location
-mongoose.connect(config.mongoLocation_dev); 
+mongoose.connect(config.mongoLocation_production); // change to mongoLocation_production for production || mongoLocation_dev for dev
 
 // template setting
 app.set('view engine', 'ejs');
@@ -45,6 +45,72 @@ passport.use(new localStrategy({
     usernameField: 'email'}, User.authenticate())); // creating a new local startegy coming from the passport-local-mongoose we exported functions
 passport.serializeUser(User.serializeUser());   // passport uses this to encode the session info
 passport.deserializeUser(User.deserializeUser());  // passport uses this to decode the session info
+
+/////////////////////////////////////////////////////////////
+//----------------------Login------------------------------\\
+/////////////////////////////////////////////////////////////
+app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
+    successRedirect: '/success',
+    failureRedirect: '/login-badInfo'
+}), function(req, res){
+});
+
+app.get('/success', isLoggedIn, function(req, res){ // using my custom middleware to tell if the req is authenticated if so keep going if not redirect to home
+    res.render('broker-success');
+});
+
+// custom middle ware that check it a user is already logged in or not
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated())
+        return next(); // allows route to go to the next function in its list
+    else
+        res.redirect('/login');
+}
+
+////////////////////////////////////////////////////////////////////////////////
+//----------------------Request Access / Sign up------------------------------\\
+////////////////////////////////////////////////////////////////////////////////
+app.post('/request', function(req, res){
+    User.find({ username: req.body.email }, function(err, user) { console.log(user);
+        if (err) 
+            throw err;
+        
+        if(user.length == 0){
+            sendgrid.send({
+                to:       config.emailLocation,
+                from:     'info@primexprime.com',
+                name:     req.body.name,
+                subject:  'Primex Login Request',
+                html:     `<h2><b>Primex Login Request</b></h2> <br/><br/> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br />`
+
+                }, function(err, json) {
+                     if (err)
+                       return console.error(err);    
+                      else{ 
+                          console.log('Success'); 
+                          res.render('thank-you'); 
+                      }
+            })   
+        }else{
+            console.log('In DB!');
+            sendgrid.send({
+                to:       req.body.email,
+                from:     'info@primexprime.com',
+                name:     req.body.email,
+                subject:  'Primex Login Instructions',
+                html:     `<h2><b>Primex Login Instructions</b></h2> <br/><br/> Use the link below to and enter your temporary access code. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>`  //////////////----------------------Change to production
+
+                }, function(err, json) {
+                     if (err)
+                       return console.error(err);    
+                      else{ 
+                          console.log('Success'); 
+                          res.render('request-success');
+                      }
+            });                       
+        }
+    })    
+});
 
 ////////////////////////////////////////////////////////////////////////
 //----------------------Change Passsword------------------------------\\
@@ -91,27 +157,6 @@ function existsNdelete(req, res, next){
     })
 };
 
-/////////////////////////////////////////////////////////////
-//----------------------Login------------------------------\\
-/////////////////////////////////////////////////////////////
-app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
-    successRedirect: '/success',
-    failureRedirect: '/login-badInfo'
-}), function(req, res){
-});
-
-app.get('/success', isLoggedIn, function(req, res){ // using my custom middleware to tell if the req is authenticated if so keep going if not redirect to home
-    res.render('broker-success');
-});
-
-// custom middle ware that check it a user is already logged in or not
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated())
-        return next(); // allows route to go to the next function in its list
-    else
-        res.redirect('/login');
-}
-
 ////////////////////////////////////////////////////////////////////////
 //----------------------Forget Passsword------------------------------\\ 
 ////////////////////////////////////////////////////////////////////////
@@ -129,7 +174,7 @@ app.post('/recovery', function(req, res){
                 from:     'info@primexprime.com',
                 name:     req.body.email,
                 subject:  'Primex Password Reset',
-                html:     `<h2><b>Primex Password Reset</b></h2> <br/><br/> Use the link below and enter your email and access code to change password. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://localhost:3000/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
+                html:     `<h2><b>Primex Password Reset</b></h2> <br/><br/> Use the link below and enter your email and access code to change password. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
 
                 }, function(err, json) {
                      if (err)
@@ -143,56 +188,14 @@ app.post('/recovery', function(req, res){
     })    
 });
 
-//////////////////////////////////////////////////////////////////////
-//----------------------Request Access------------------------------\\
-//////////////////////////////////////////////////////////////////////
-app.post('/request', function(req, res){
-    User.find({ username: req.body.email }, function(err, user) { console.log(user);
-        if (err) 
-            throw err;
-        
-        if(user.length == 0){
-            sendgrid.send({
-                to:       config.emailLocation,
-                from:     'info@primexprime.com',
-                name:     req.body.name,
-                subject:  'Primex Login Request',
-                html:     `<h2><b>Primex Login Request</b></h2> <br/><br/> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br />`
-
-                }, function(err, json) {
-                     if (err)
-                       return console.error(err);    
-                      else{ 
-                          console.log('Success'); 
-                          res.render('thank-you'); 
-                      }
-            })   
-        }else{
-            console.log('In DB!');
-            sendgrid.send({
-                to:       req.body.email,
-                from:     'info@primexprime.com',
-                name:     req.body.email,
-                subject:  'Primex Login Instructions',
-                html:     `<h2><b>Primex Login Instructions</b></h2> <br/><br/> Use the link below to and enter your temporary access code. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://localhost:3000/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>`  //////////////----------------------Change to production
-
-                }, function(err, json) {
-                     if (err)
-                       return console.error(err);    
-                      else{ 
-                          console.log('Success'); 
-                          res.render('request-success');
-                      }
-            });                       
-        }
-    })    
-});
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //--------------------------------Routes ( non passport related / User Model realated )-------------------\\
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 require('./routes')(app, config, sendgrid);
 
+/////////////////////////////////////////////////////////////////////////
+//--------------------------------App port listening-------------------\\
+/////////////////////////////////////////////////////////////////////////
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
