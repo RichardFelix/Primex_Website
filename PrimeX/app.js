@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////////////////////
+//--------------------------Includes--------------------------------\\
+//////////////////////////////////////////////////////////////////////
 var express = require('express'),
     app = express(),
     compression = require('compression'),
@@ -10,22 +13,31 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     sendgrid  = require('sendgrid')(config.sendgridUser, config.sendgridPwd),
     User = require('./models/user'),
-    Email = require('./models/email');;
+    mongoose = require('mongoose');
 
+//////////////////////////////////////////////////////////////////////
+//----------------------App Settings--------------------------------\\
+//////////////////////////////////////////////////////////////////////
+// mongoose location
+mongoose.connect(config.mongoLocation_dev); 
+
+// template setting
 app.set('view engine', 'ejs');
 
-// gzip enabled for faster loading
+// gzip enabled for faster loading ( use nginx for this for prouduction )
 app.use(compression());
 
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
-
+// Express Session Settings 
 app.use(session({ // this is a way of requiring a module and passing functions to app 
         secret: 'this can be anything',   // all these options are needed for express-session to work
         resave: false,
         saveUninitialized: false
 }));
+
+// Passport Settings
 app.use(passport.initialize());    // needed to use passport
 app.use(passport.session());       // needed to use passport
 app.use(bodyParser.urlencoded({extended: true})); // needed for body parser to work
@@ -34,7 +46,9 @@ passport.use(new localStrategy({
 passport.serializeUser(User.serializeUser());   // passport uses this to encode the session info
 passport.deserializeUser(User.deserializeUser());  // passport uses this to decode the session info
 
-//----------------------Change Passsword 
+////////////////////////////////////////////////////////////////////////
+//----------------------Change Passsword------------------------------\\
+////////////////////////////////////////////////////////////////////////
 app.post('/changePassword', existsNdelete, function(req, res){ 
         User.register(new User({username: req.body.email, accessCode: Math.floor((Math.random() * 100000) + 1000) }), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         if(err)
@@ -77,13 +91,12 @@ function existsNdelete(req, res, next){
     })
 };
 
-//----------------------------Register
-app.post('/register', Email.findOne);  // newEmail function to put a new Email in emails colletions && findOne for production 
-
-//------------------------------Login
+/////////////////////////////////////////////////////////////
+//----------------------Login------------------------------\\
+/////////////////////////////////////////////////////////////
 app.post('/login', passport.authenticate('local', { // this middleware is checking if the login in a sucess or not using the local strategy
     successRedirect: '/success',
-    failureRedirect: '/login'
+    failureRedirect: '/login-badInfo'
 }), function(req, res){
 });
 
@@ -99,7 +112,9 @@ function isLoggedIn(req, res, next){
         res.redirect('/login');
 }
 
-//--------------------------Forget Password
+////////////////////////////////////////////////////////////////////////
+//----------------------Forget Passsword------------------------------\\ 
+////////////////////////////////////////////////////////////////////////
 app.post('/recovery', function(req, res){
     User.find( { username: req.body.email }, function(err, user) {
         if (err) 
@@ -114,21 +129,23 @@ app.post('/recovery', function(req, res){
                 from:     'info@primexprime.com',
                 name:     req.body.email,
                 subject:  'Primex Password Reset',
-                html:     `<h2><b>Primex Password Reset</b> <br /><br /> Use the link below and enter your email and access code to change password. <br /><br /><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://localhost:3000/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
+                html:     `<h2><b>Primex Password Reset</b></h2> <br/><br/> Use the link below and enter your email and access code to change password. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://localhost:3000/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
 
                 }, function(err, json) {
                      if (err)
                        return console.error(err);    
                       else{ 
                           console.log('Success'); 
-                          res.render('changePassword', { email: req.body.email, alert: 'Check Your Email for Access Code' });
+                          res.render('request-success');//, { email: req.body.email, alert: 'Check Your Email for Access Code' });
                       }
             });                       
         }
     })    
 });
 
-//--------------------------------Request Access Post
+//////////////////////////////////////////////////////////////////////
+//----------------------Request Access------------------------------\\
+//////////////////////////////////////////////////////////////////////
 app.post('/request', function(req, res){
     User.find({ username: req.body.email }, function(err, user) { console.log(user);
         if (err) 
@@ -138,9 +155,9 @@ app.post('/request', function(req, res){
             sendgrid.send({
                 to:       config.emailLocation,
                 from:     'info@primexprime.com',
-                name:     req.body.id,
+                name:     req.body.name,
                 subject:  'Primex Login Request',
-                html:     `<h2><b>Primex Login Request</b> <br /><br /> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br /></h2>`
+                html:     `<h2><b>Primex Login Request</b></h2> <br/><br/> <b>Name:      </b> ${req.body.name} <br /> <b>Email:      </b>${req.body.email} <br />`
 
                 }, function(err, json) {
                      if (err)
@@ -171,7 +188,9 @@ app.post('/request', function(req, res){
     })    
 });
 
-//--------------------------------Routes ( non passport related / User Model realated )
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//--------------------------------Routes ( non passport related / User Model realated )-------------------\\
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
 require('./routes')(app, config, sendgrid);
 
 app.listen(port, function() {
