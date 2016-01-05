@@ -131,6 +131,7 @@ ul{
 /* Text Style */ 
 .italic{ font-style: italic; }
 .normal{ font-style: normal; }
+.red-bold-text{ color: red; font-weight: bold;}
 	
 		
 /* Text Style */ 
