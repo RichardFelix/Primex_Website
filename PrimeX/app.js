@@ -71,7 +71,8 @@ function isLoggedIn(req, res, next){
 //----------------------Request Access / Sign up------------------------------\\
 ////////////////////////////////////////////////////////////////////////////////
 app.post('/request', function(req, res){
-    User.find({ username: req.body.email }, function(err, user) { console.log(user);
+    var email = req.body.email.toLowerCase();
+    User.find({ username: email }, function(err, user) { console.log(user);
         if (err) 
             throw err;
         
@@ -115,10 +116,11 @@ app.post('/request', function(req, res){
 ////////////////////////////////////////////////////////////////////////
 //----------------------Change Passsword------------------------------\\
 ////////////////////////////////////////////////////////////////////////
-app.post('/changePassword', existsNdelete, function(req, res){ 
+app.post('/changePassword', existsNdelete, function(req, res){  // take out middleware to input to Emails in db for development
+        req.body.email = req.body.email.toLowerCase();
         User.register(new User({username: req.body.email, accessCode: Math.floor((Math.random() * 100000) + 1000) }), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         if(err)
-            return res.render('broker-login', {email: req.body.email, alert: ''});
+            return res.render('broker-login', {email: email, alert: ''});
         
         passport.authenticate('local')(req, res, function(){ // using local strat and hash password
             res.render('broker-success');
@@ -128,7 +130,7 @@ app.post('/changePassword', existsNdelete, function(req, res){
 
 // custom middle ware to find if a user is exists if so delete it so it can be reregistered And if info is incorrect 
 function existsNdelete(req, res, next){ 
-
+    var email = req.body.email.toLowerCase();
     User.find({ accessCode: req.body.accessCode }, function(err, user) {   
       if (err) 
           throw err;
@@ -136,11 +138,11 @@ function existsNdelete(req, res, next){
         if(user.length == 0){
             res.redirect('/changePassword-BadInfo');
         }else{
-           User.find({ username: req.body.email }, function(err, user2) { 
+           User.find({ username: email }, function(err, user2) { 
                 if(err)
                     throw err;
                
-                if(req.body.email != user[0].username){
+                if(email != user[0].username){
                     res.redirect('/changePassword-BadInfo');
                 }else{
                   User.remove({ username: user2[0].username }, function(err) {
@@ -161,7 +163,8 @@ function existsNdelete(req, res, next){
 //----------------------Forget Passsword------------------------------\\ 
 ////////////////////////////////////////////////////////////////////////
 app.post('/recovery', function(req, res){
-    User.find( { username: req.body.email }, function(err, user) {
+    var email = req.body.email.toLowerCase();
+    User.find( { username: email }, function(err, user) {
         if (err) 
             throw err;
         

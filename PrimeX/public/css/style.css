@@ -1186,11 +1186,13 @@ nav.navbar,
 .form-control::-webkit-input-placeholder {
   color: #ddd;
 }
+.font-lowercase{
+    text-transform:lowercase;
+}
 .form-control{
 	height: 48px;
 	padding: 14px 20px;
 	font-size: 13px;		
-	text-transform:capitalize;
 	border-radius: 2px;
 	-ms-border-radius: 2px;
 	-moz-border-radius: 2px;
