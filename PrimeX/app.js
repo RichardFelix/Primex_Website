@@ -99,7 +99,7 @@ app.post('/request', function(req, res){
                 from:     'info@primexprime.com',
                 name:     req.body.email,
                 subject:  'Primex Login Instructions',
-                html:     `<h2><b>Primex Login Instructions</b></h2> <br/><br/> Use the link below to and enter your temporary access code. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>`  //////////////----------------------Change to production
+                html:     `<h2><b>Primex Login Instructions</b></h2> <br/><br/> Use the link below to and enter your temporary access code. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='https://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>`  //////////////----------------------Change to production
 
                 }, function(err, json) {
                      if (err)
@@ -177,7 +177,7 @@ app.post('/recovery', function(req, res){
                 from:     'info@primexprime.com',
                 name:     req.body.email,
                 subject:  'Primex Password Reset',
-                html:     `<h2><b>Primex Password Reset</b></h2> <br/><br/> Use the link below and enter your email and access code to change password. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='http://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
+                html:     `<h2><b>Primex Password Reset</b></h2> <br/><br/> Use the link below and enter your email and access code to change password. <br/><br/><b>Access Code:      </b>${user[0].accessCode} <br/><br/><b>Link:</b> <a href='https://primexprime.com/changePassword'>http://primexprime.com/f8sfd3s3stttd973432dsakol3309kdllo932</a>` //////////////----------------------Change to production
 
                 }, function(err, json) {
                      if (err)
