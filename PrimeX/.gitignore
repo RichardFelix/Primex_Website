@@ -1,3 +1,4 @@
 node_modules
 flightplan.js
 config
+.DS_Store
