@@ -23,7 +23,7 @@ http://www.primexprime.com
 ## Screen Shots ##
 
 ### Mobile ###
-![bgmobile22.jpg](https://bitbucket.org/repo/qGRB8b/images/1352106838-bgmobile22.jpg)
+![bgmobile22.jpg](https://github.com/RichardFelix/Primex_Website/blob/master/pics/bgmobile22.jpg)
 
 ### Desktop ###
-![desktop2.JPG](https://bitbucket.org/repo/qGRB8b/images/2654177017-desktop2.JPG)
+![desktop2.JPG](https://raw.githubusercontent.com/RichardFelix/Primex_Website/master/pics/desktop2.JPG)
