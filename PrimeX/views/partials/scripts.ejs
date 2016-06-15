@@ -3,8 +3,8 @@
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
-        <script src="js/js-webshim/minified/polyfiller.js"></script>
-        <script> 
+        <script async src="js/js-webshim/minified/polyfiller.js"></script>
+        <script>
             /* form validation code */
             (function () {
                 webshim.setOptions('forms', {
@@ -21,7 +21,7 @@
             });
             webshim.polyfill('forms');
         })();
-        
+
         function checkPhone(evt) {
             evt = (evt) ? evt : window.event
             var charCode = (evt.which) ? evt.which : evt.keyCode
