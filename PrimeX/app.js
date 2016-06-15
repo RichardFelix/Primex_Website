@@ -3,7 +3,6 @@
 //////////////////////////////////////////////////////////////////////
 var express = require('express'),
     app = express(),
-    compression = require('compression'),
     config = require('./config/config.js'),
     session = require('express-session'),
     passport = require('passport'),
@@ -30,8 +29,8 @@ app.use(compression());
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
-// Express Session Settings 
-app.use(session({ // this is a way of requiring a module and passing functions to app 
+// Express Session Settings
+app.use(session({ // this is a way of requiring a module and passing functions to app
         secret: 'this can be anything',   // all these options are needed for express-session to work
         resave: false,
         saveUninitialized: false
@@ -73,9 +72,9 @@ function isLoggedIn(req, res, next){
 app.post('/request', function(req, res){
     var email = req.body.email.toLowerCase();
     User.find({ username: email }, function(err, user) { console.log(user);
-        if (err) 
+        if (err)
             throw err;
-        
+
         if(user.length == 0){
             sendgrid.send({
                 to:       config.emailLocation,
@@ -86,12 +85,12 @@ app.post('/request', function(req, res){
 
                 }, function(err, json) {
                      if (err)
-                       return console.error(err);    
-                      else{ 
-                          console.log('Success'); 
-                          res.render('thank-you'); 
+                       return console.error(err);
+                      else{
+                          console.log('Success');
+                          res.render('thank-you');
                       }
-            })   
+            })
         }else{
             console.log('In DB!');
             sendgrid.send({
@@ -103,14 +102,14 @@ app.post('/request', function(req, res){
 
                 }, function(err, json) {
                      if (err)
-                       return console.error(err);    
-                      else{ 
-                          console.log('Success'); 
+                       return console.error(err);
+                      else{
+                          console.log('Success');
                           res.render('request-success');
                       }
-            });                       
+            });
         }
-    })    
+    })
 });
 
 ////////////////////////////////////////////////////////////////////////
@@ -121,53 +120,53 @@ app.post('/changePassword', existsNdelete, function(req, res){  // take out midd
         User.register(new User({username: req.body.email, accessCode: Math.floor((Math.random() * 100000) + 1000) }), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         if(err)
             return res.render('broker-login', {email: email, alert: ''});
-        
+
         passport.authenticate('local')(req, res, function(){ // using local strat and hash password
             res.render('broker-success');
-        })       
+        })
     })
 });
 
-// custom middle ware to find if a user is exists if so delete it so it can be reregistered And if info is incorrect 
-function existsNdelete(req, res, next){ 
+// custom middle ware to find if a user is exists if so delete it so it can be reregistered And if info is incorrect
+function existsNdelete(req, res, next){
     var email = req.body.email.toLowerCase();
-    User.find({ accessCode: req.body.accessCode }, function(err, user) {   
-      if (err) 
+    User.find({ accessCode: req.body.accessCode }, function(err, user) {
+      if (err)
           throw err;
-        
+
         if(user.length == 0){
             res.redirect('/changePassword-BadInfo');
         }else{
-           User.find({ username: email }, function(err, user2) { 
+           User.find({ username: email }, function(err, user2) {
                 if(err)
                     throw err;
-               
+
                 if(email != user[0].username){
                     res.redirect('/changePassword-BadInfo');
                 }else{
                   User.remove({ username: user2[0].username }, function(err) {
-                        if (err) 
+                        if (err)
                             throw err;
                     })
-                  
+
                   console.log('User successfully deleted!');
                   return next();
                 }
-           }) 
+           })
         }
 
     })
 };
 
 ////////////////////////////////////////////////////////////////////////
-//----------------------Forget Passsword------------------------------\\ 
+//----------------------Forget Passsword------------------------------\\
 ////////////////////////////////////////////////////////////////////////
 app.post('/recovery', function(req, res){
     var email = req.body.email.toLowerCase();
     User.find( { username: email }, function(err, user) {
-        if (err) 
+        if (err)
             throw err;
-        
+
         if(user.length == 0)
             res.render('password-recovery', {alert: 'Incorrect Email'})
         else{
@@ -181,14 +180,14 @@ app.post('/recovery', function(req, res){
 
                 }, function(err, json) {
                      if (err)
-                       return console.error(err);    
-                      else{ 
-                          console.log('Success'); 
+                       return console.error(err);
+                      else{
+                          console.log('Success');
                           res.render('request-success');//, { email: req.body.email, alert: 'Check Your Email for Access Code' });
                       }
-            });                       
+            });
         }
-    })    
+    })
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
