@@ -23,9 +23,6 @@ mongoose.connect(config.mongoLocation_production); // change to mongoLocation_pr
 // template setting
 app.set('view engine', 'ejs');
 
-// gzip enabled for faster loading ( use nginx for this for prouduction )
-app.use(compression());
-
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
