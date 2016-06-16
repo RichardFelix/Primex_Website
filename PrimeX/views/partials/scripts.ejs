@@ -8,24 +8,8 @@
         <script async type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
         <script async type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js'></script>
         <script async src="js/js-webshim/minified/polyfiller.js"></script>
-        <script>
-            /* form validation code */
-            (function () {
-                webshim.setOptions('forms', {
-                    lazyCustomMessages: true,
-                    iVal: {
-                        sel: '.ws-validate',
-                        handleBubble: 'hide',
-
-                        errorMessageClass: 'help-block',
-                        successWrapperClass: 'has-success',
-                        errorWrapperClass: 'has-error',
-                        fieldWrapper: '.form-group'
-                }
-            });
-            webshim.polyfill('forms');
-        })();
-
+        <script>y
+        /*  Check form phone number textbox and only allow numbers to be typed in textbox */
         function checkPhone(evt) {
             evt = (evt) ? evt : window.event
             var charCode = (evt.which) ? evt.which : evt.keyCode
