@@ -1,6 +1,12 @@
 /*-----------------------------------------------------------------------
 							RESPONSIVE STYLES
 ------------------------------------------------------------------------- */
+/* =========== MAX 1150PX =========== */
+@media only screen and (max-width:1150px) {
+.navbar-transparent .navbar-default, .navbar-transparent .sticky-wrapper{
+	background-color:#222222;
+}
+
 /* =========== MAX 1150px =========== */
 @media only screen and (max-width:1150px) {
 	/* Blog */
@@ -22,7 +28,7 @@
 	/* Chart */
 	.legend:before , .legend:after{
 		content: none;
-	} 
+	}
 }
 
 
@@ -51,9 +57,9 @@
 		opacity: 0.2;
 	}
 
-	
 
-	
+
+
 }
 
 /* =========== MAX 991PX =========== */
@@ -81,7 +87,7 @@
 	.pad10-top-991{
 		padding-top: 10px;
 	}
-	
+
 	/* Footer */
 	.short-news .foot-title, .short-news .caption-block{
 		margin-top: 20px;
@@ -106,7 +112,7 @@
 	.blog-2-col .img-border-caption {
 	    border-width: 0 0 1px;
 	}
-	
+
 
 }
 
@@ -124,7 +130,7 @@
 	.visible-767{
 		display: block;
 	}
-	
+
 	/* Margin Style */
 	.margin30-top-767{
 		margin-top: 30px;
@@ -142,8 +148,8 @@
 	.pad10-top-767{
 		padding-top: 10px;
 	}
-	
-	
+
+
 	/* Works Section */
 	.project-grid{
 		width: 75%;
@@ -162,7 +168,7 @@
 		float:  none;
 		text-align:  center;
 	}
-	
+
 	/* Copy Rights */
 	.copyrights-section p, .social-links.text-right{
 		text-align: center;
@@ -177,7 +183,7 @@
 
 
 	/* Attorney */
-	
+
 	.attorney-block{
 		padding: 0px 0px 0px 0px;
 		position: relative;
@@ -213,12 +219,12 @@
 	    -webkit-transform: rotate(-5deg) skewX(-5deg);
 	    -ms-transform: rotate(-5deg) skewX(-5deg);
 	    -o-transform: rotate(-5deg) skewX(-5deg);
-		   
+
 	}
 	/* Client Section */
 	.client-slider{
 		padding: 0 20px;
-		
+
 	}
 	/* Why Choose Section */
 	.choose-section > .border-bottom, .border-right,  .border-top,	.border-left{
@@ -239,14 +245,14 @@
 		padding: 22px 0 18px 20px;
 	}
 
-	
+
 }
 /* =========== MAX 640PX =========== */
 @media screen and (max-width:640px) {
 	.visible-640{
 		display: block;
 	}
-	
+
 	/* Margin Style */
 	.margin-640-large-top{
 		margin-top: 30px;
@@ -254,7 +260,7 @@
 	.margin-640-large-bottom{
 		margin-bottom: 30px;
 	}
-	
+
 	.margin-640-md-top{
 		margin-top: 20px;
 	}
@@ -269,7 +275,7 @@
 	.reply{
 		width: 95%;
 	}
-	
+
 }
 /* =========== MAX 480PX =========== */
 @media screen and (max-width:480px) {
@@ -286,15 +292,31 @@
 	.blog-2-col .blog-caption-block{
 		padding: 20px 0px;
 	}
-	
 }
 
-/* =========== MAX 1150PX =========== */
-@media only screen and (max-width:1150px) {
-.navbar-transparent .navbar-default, .navbar-transparent .sticky-wrapper{
-	background-color:#222222;
-}
-
-	
-	
+/* =========== MAX 374PX =========== */
+@media screen and (max-width:374px) {
+	/*section */
+	section{
+		padding: 40px 0;
+	}
+	.btn.btn-default {
+		height: 39px;
+		line-height: 36px;
+		width: 120px;
+	}
+	/* Blog */
+	.blog-2-col .blog-caption-block{
+		padding: 20px 0px;
+	}
+	.left-middle-block{
+		position: absolute;
+		left: 0%;
+		top: 58%;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		     -o-transform: translateY(-50%);
+				transform: translateY(-50%);
+	}
 }
