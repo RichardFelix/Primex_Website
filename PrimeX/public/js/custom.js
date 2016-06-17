@@ -7,30 +7,11 @@ $(document).ready(function() {
      Background image height equal to the browser height
 
     --------------------------------------------------- */
-
-    $('.wide-container').css({
-        'height': $(window).height()
-    });
     $(window).on('resize', function() {
         $('.wide-container').css({
             'height': $(window).height()
         });
     });
-
-    /* -------------------------------------------------
-
-     Background Image
-
-    --------------------------------------------------- */
-     bgImage();
-
-    function bgImage() {
-        if($(window).width() < 500){
-            $('.container').css("max-width", "96%");
-            $('.image-bg').css("background-image", 'url(../img/bg/bgMobile1.jpg)');
-            $('.hero-content').attr('class','hero-content left-middle-block1 z-index9');
-        }
-    }
 
     /*----------------------------------
 

@@ -18,10 +18,12 @@
 }
 
 .image-bg {
-    background: url(../img/bg/bg11.jpg) no-repeat;
-    background-size:cover
+		height: 100%;
 }
 
+.wide-container{
+	height: 100vh;
+}
 /* ----------------------------------------------------------------------
 
 							GLOBAL STYLES

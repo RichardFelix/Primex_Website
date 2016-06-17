@@ -294,3 +294,17 @@
 .navbar-transparent .navbar-default, .navbar-transparent .sticky-wrapper{
 	background-color:#222222;
 }
+
+/* =========== MAX 361px =========== */
+@media only screen and (max-width:361px) {
+	.left-middle-block{
+		position: absolute;
+		left: 0%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+}
