@@ -296,19 +296,6 @@
 
 /* =========== MAX 374PX =========== */
 @media screen and (max-width:374px) {
-	/*section */
-	section{
-		padding: 40px 0;
-	}
-	.btn.btn-default {
-		height: 39px;
-		line-height: 36px;
-		width: 120px;
-	}
-	/* Blog */
-	.blog-2-col .blog-caption-block{
-		padding: 20px 0px;
-	}
 	.left-middle-block{
 		position: absolute;
 		left: 0%;
