@@ -775,6 +775,11 @@ ul{
     width: 20px;
 }
 
+/* ------------ Navbar ------------------ */
+.navbar-default .navbar-toggle {
+  height:40px;
+}
+
 /* ------------ Navbar Pills ------------------ */
 .nav-pills > li{
 	float: none;
