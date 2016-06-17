@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <%- include('partials/head.ejs') %>
-    
+
     <body id="blue-layout">
         <!-- Header Begins -->
         <header id="header" class="navbar-light">
@@ -11,7 +11,9 @@
                         <div class="navbar-header">
                             <!-- Mobile View Menu Toogle Btn -->
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <img src="img/hamburger.png">
+                              <span class='icon-bar'></span>
+                              <span class='icon-bar'></span>
+                              <span class='icon-bar'></span>
                             </button>
                             <!-- Site Logo -->
                             <a class="navbar-brand vertical-left-align-middle-block" href="/" id="scroll"><img alt="logo" src="img/logo-color.png"></a>
@@ -53,10 +55,10 @@
                 </nav>
                 <!-- nav Ends -->
         </header>
-   
+
         <%- include('partials/services.ejs') %>
         <%- include('partials/footer.ejs') %>
         <%- include('partials/scripts.ejs') %>
-        
+
     </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
     <%- include('partials/head.ejs') %>
-    
+
     <body id="blue-layout">
         <!-- Header Begins -->
         <header id="header" class="navbar-light">
@@ -11,7 +11,9 @@
                         <div class="navbar-header">
                             <!-- Mobile View Menu Toogle Btn -->
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <img src="img/hamburger.png">
+                              <span class='icon-bar'></span>
+                              <span class='icon-bar'></span>
+                              <span class='icon-bar'></span>
                             </button>
                             <!-- Site Logo -->
                             <a class="navbar-brand vertical-left-align-middle-block" href="/" id="scroll"><img alt="logo" src="img/logo-color.png"></a>
@@ -90,17 +92,17 @@
                         </div>
                         <div class="form-group">
                           <label class="control-label col-sm-2" for="pwd">Password:</label>
-                          <div class="col-sm-6">          
+                          <div class="col-sm-6">
                             <input type="password" class="form-control" id="pwd" name='password' required placeholder="Enter password">
                           </div>
                         </div>
-                        <div class="form-group">        
+                        <div class="form-group">
                           <div class="col-sm-offset-2 col-sm-6">
                             <button type="submit" class="btn btn-default active ">Submit</button>
                             </div>
                               <div class="register pad40-top col-sm-offset-2 col-sm-6">
                                 <button type="button" class="btn btn-default active" onclick="window.location='/register'">Sign Up</button>
-                              </div> 
+                              </div>
                          </div>
                       </form>
                         <div class='col-sm-offset-2 col-sm-6'><a href='/recovery'>Forgot Password?</a></div>

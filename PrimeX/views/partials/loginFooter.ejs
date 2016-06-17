@@ -11,30 +11,15 @@
         <!-- Section Ends -->
         <!-- Scripts Begins -->
         <!-- Scripts Begins -->
-<script src="https://maps.google.com/maps/api/js?sensor=true"></script>
-        <script src="js/gmaps.js"></script>
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/custom.js"></script>
-        <script src="js/js-webshim/minified/polyfiller.js"></script>
-        <script> 
-            /* form validation code */
-            (function () {
-                webshim.setOptions('forms', {
-                    lazyCustomMessages: true,
-                    iVal: {
-                        sel: '.ws-validate',
-                        handleBubble: 'hide',
-
-                        errorMessageClass: 'help-block',
-                        successWrapperClass: 'has-success',
-                        errorWrapperClass: 'has-error',
-                        fieldWrapper: '.form-group'
-                }
-            });
-            webshim.polyfill('forms');
-        })();
-        
+        <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js'></script>
+        <script async type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+        <script async type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js'></script>
+        <script async src="js/js-webshim/minified/polyfiller.js"></script>
+        <script>
+        /*  Check form phone number textbox and only allow numbers to be typed in textbox */
         function checkPhone(evt) {
             evt = (evt) ? evt : window.event
             var charCode = (evt.which) ? evt.which : evt.keyCode
@@ -46,11 +31,4 @@
 
             return true;
         }
-
-        function lowerCase ( input ) {
-            setTimeout( function () {
-                input.value = input.value.toLowerCase();    
-            }, 0 );    
-        }
         </script>
-    
