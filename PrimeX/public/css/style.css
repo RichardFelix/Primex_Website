@@ -17,15 +17,16 @@
     background-size:cover
 }
 
+.image-bg {
+    background: url(../img/bg/bg11.jpg) no-repeat;
+    background-size:cover
+}
+
 /* ----------------------------------------------------------------------
 
 							GLOBAL STYLES
 
 ------------------------------------------------------------------------*/
-.vh-vw{
-	width: 100vw;
-	height: 100vh;
-}
 
 body, .tooltip-inner{
 	font-family: 'Raleway', sans-serif;
@@ -1551,6 +1552,7 @@ nav.navbar,
     font-size: 13px;
     padding-right: 0;
 }
+
 /* ==========================================================================
  map-wrapper
  ========================================================================== */
