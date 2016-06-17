@@ -19,8 +19,8 @@
 /* Countdown */
 .count-dark.period-top.period-color .countdown-period,
 /*btn */
-.btn:after, 
-.btn:after, 
+.btn:after,
+.btn:after,
 .btn.active,
 /* Owl Btn */
 .theme-color-owl-btn .owl-buttons div:hover,
@@ -31,21 +31,21 @@
 .icon-border:focus,
 .icon-border.active,
 /* pagination */
-.pagination > li > a:focus, 
+.pagination > li > a:focus,
 .pagination > li > a:hover,
 .pagination > li > a.active,
-.pagination > li > span:focus, 
+.pagination > li > span:focus,
 .pagination > li > span:hover,
 .pagination > li > span.active,
 /* Social Links Color */
 .social-links.color li a,
 /* Tags */
-.widget-tag > li a:hover, 
-.widget-tag > li a:focus, 
+.widget-tag > li a:hover,
+.widget-tag > li a:focus,
 .widget-tag > li a.active,
 /* Filter */
-.nav-pills > li > a:hover, 
-.nav-pills > li > a:focus, 
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus,
 .nav-pills > li > a.active,
 .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus,
 .pager li > a, .pager li > a
@@ -111,7 +111,7 @@
 	color: #175C85;
 }
 .navbar-default .navbar-nav > li > a:focus,
-.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a.active
 {
 color:#FFF;
@@ -124,10 +124,10 @@ background-color:#175c85;
 --------------------------------*/
 .theme-color-owl-btn .owl-buttons div,
 /* pagination */
-.pagination > li > a:focus, 
+.pagination > li > a:focus,
 .pagination > li > a:hover,
 .pagination > li > a.active,
-.pagination > li > span:focus, 
+.pagination > li > span:focus,
 .pagination > li > span:hover,
 .pagination > li > span.active,
 /* Owl Pagination */
@@ -139,8 +139,8 @@ background-color:#175c85;
 /* Social Links Color */
 .social-links.color li a,
 /* Widget */
-.widget-tag > li a:hover, 
-.widget-tag > li a:focus, 
+.widget-tag > li a:hover,
+.widget-tag > li a:focus,
 .widget-tag > li a.active,
 /* Blockquote */
 blockquote,
@@ -159,11 +159,17 @@ blockquote,
 /* -------------------------------
 	***** Border Right Color *****
 --------------------------------*/
-.nav-tabs > li.active > a, 
-.nav-tabs > li.active > a:focus, 
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:before
 {
 	border-right-color: #175C85;
 }
 
+/* -------------------------------
+	*****   Nav Span Color     *****
+--------------------------------*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
