@@ -1555,12 +1555,13 @@ nav.navbar,
 	color: black;
 	font-family: "Raleway",sans-serif;
 	line-height: 60px;
-	/*text-shadow: 1px 1px #FFF;*/
+	text-shadow: 1px 1px #ccc;
 }
 #blue-layout .hero-content p {
     color: #000;
     font-size: 16px;
     padding-right: 0;
+		text-shadow: 1px 1px #ccc;
 }
 
 /* ==========================================================================
