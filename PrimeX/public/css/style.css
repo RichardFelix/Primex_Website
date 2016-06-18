@@ -1550,14 +1550,15 @@ nav.navbar,
 }
 /* Blue Layout */
 #blue-layout .hero-content h1{
-	font-weight:300;
-	font-size:45px;
-	color:#444;
+	font-weight: 300;
+	font-size: 45px;
+	color: black;
 	font-family: "Raleway",sans-serif;
-	line-height:60px;
+	line-height: 60px;
+	/*text-shadow: 1px 1px #FFF;*/
 }
 #blue-layout .hero-content p {
-    color: #666;
+    color: #000;
     font-size: 13px;
     padding-right: 0;
 }
