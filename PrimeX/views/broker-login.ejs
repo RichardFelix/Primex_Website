@@ -87,7 +87,7 @@
                         <div class="form-group">
                           <label class="control-label col-sm-2" for="email">Email:</label>
                           <div class="col-sm-6">
-                            <input type="email" class="email form-control" id="email" name='email' required placeholder="Enter email" value='<%= email %>' onkeypress="lowerCase(this)">
+                            <input type="email" class="email form-control" id="email" name='email' required placeholder="Enter email" value='<%= email %>' onkeypress='lowerCase(this)'>
                           </div>
                         </div>
                         <div class="form-group">
@@ -113,5 +113,11 @@
             <!-- container -->
         </section>
         <%- include('partials/loginFooter.ejs') %>
+        <script>
+        //lowerCase email in form on keyup
+        $('#email').keyup(function() {
+          this.value = this.value.toLowerCase();
+        })
+        </script>
     </body>
 </html>

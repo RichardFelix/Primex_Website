@@ -49,6 +49,7 @@ app.post('/login', passport.authenticate('local', { // this middleware is checki
     successRedirect: '/success',
     failureRedirect: '/login-badInfo'
 }), function(req, res){
+
 });
 
 app.get('/success', isLoggedIn, function(req, res){ // using my custom middleware to tell if the req is authenticated if so keep going if not redirect to home
@@ -114,6 +115,7 @@ app.post('/request', function(req, res){
 ////////////////////////////////////////////////////////////////////////
 app.post('/changePassword', existsNdelete, function(req, res){  // take out middleware to input to Emails in db for development
         req.body.email = req.body.email.toLowerCase();
+
         User.register(new User({username: req.body.email, accessCode: Math.floor((Math.random() * 100000) + 1000) }), req.body.password,  function(err, user){ // creates a new user and salt/hash password
         if(err)
             return res.render('broker-login', {email: email, alert: ''});
@@ -127,6 +129,7 @@ app.post('/changePassword', existsNdelete, function(req, res){  // take out midd
 // custom middle ware to find if a user is exists if so delete it so it can be reregistered And if info is incorrect
 function existsNdelete(req, res, next){
     var email = req.body.email.toLowerCase();
+
     User.find({ accessCode: req.body.accessCode }, function(err, user) {
       if (err)
           throw err;
