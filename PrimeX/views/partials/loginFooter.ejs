@@ -19,6 +19,10 @@
         <script async type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js'></script>
         <script async src="js/js-webshim/minified/polyfiller.js"></script>
         <script>
+				/* lowercase function to lowercase email in form */
+				$('#email').keyup(function() {
+					this.value = this.value.toLowerCase();
+				})
         /*  Check form phone number textbox and only allow numbers to be typed in textbox */
         function checkPhone(evt) {
             evt = (evt) ? evt : window.event
