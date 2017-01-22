@@ -20,6 +20,7 @@
     "sendgrid": "^1.9.2"
   },
   "devDependencies": {
+    "fibers": "^1.0.15",
     "flightplan": "^0.6.9"
   }
 }
